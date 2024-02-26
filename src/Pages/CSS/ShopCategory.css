@@ -30,6 +30,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 80px;
+    background: none;
+
 }
 .shop-category img{
     height: 250px;

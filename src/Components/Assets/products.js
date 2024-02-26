@@ -47,8 +47,9 @@ let  products = [
     // quantity: 10,
     image: sports1,
     // rating: 4.5,
-    old_price: 1999,
-    new_price: 1899,
+    newPrice: 1899,
+    price: 1999,
+    
     // trending: true,
   },
   {
