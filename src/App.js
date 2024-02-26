@@ -43,9 +43,9 @@ function App() {
     <Routes>
     
       < Route path='/' element={<Shop/>}/>
-      < Route path='/vision' element={<ShopCategory banner={vision_banner}category='vision'/>}/>
-    < Route path='/sports' element={<ShopCategory banner={sports_banner}category='sports'/>}/>
-      < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='sunglasses'/>}/>
+      < Route path='/vision' element={<ShopCategory banner={vision_banner}category='Vision'/>}/>
+    < Route path='/sports' element={<ShopCategory banner={sports_banner}category='Sports'/>}/>
+      < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='Sunglasses'/>}/>
       <Route path="/product" element={<Product/>}>
         <Route path=':productID' element={<Product/>}/>
       </Route>
