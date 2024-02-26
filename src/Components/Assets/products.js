@@ -47,8 +47,8 @@ let  products = [
     // quantity: 10,
     image: sports1,
     // rating: 4.5,
-    old_price: 1999,
-    new_price: 1899,
+    price: 1999,
+    newPrice: 1899,
     // trending: true,
   },
   {
@@ -65,8 +65,8 @@ let  products = [
     // quantity: 5,
     image: sports2,
     // rating: 4.8,
-    new_price: 1199,
-    old_price: 1299,
+    newPrice: 1199,
+    price: 1299,
    
     // trending: true,
   },
@@ -83,8 +83,8 @@ let  products = [
     // quantity: 15,
     image: sports3,
     // rating: 4.7,
-    new_price: 2000,
-    old_price: 2999,
+    newPrice: 2000,
+    price: 2999,
     
     // trending: true,
   },
@@ -101,8 +101,8 @@ let  products = [
     // quantity: 8,
     image: sports4,
     // rating: 3.8,
-    new_price: 2300,
-    old_price: 2499,
+    newPrice: 2300,
+    price: 2499,
    
   },
   {
@@ -118,8 +118,8 @@ let  products = [
     // quantity: 3,
     image: sports6,
     // rating: 3.5,
-    new_price: 3500,
-    old_price: 3999,
+    newPrice: 3500,
+    price: 3999,
     
   },
   {
@@ -135,8 +135,8 @@ let  products = [
     // quantity: 9,
     image: vision7,
     // rating: 4.3,
-    new_price: 2599,
-    old_price: 2999,
+    newPrice: 2599,
+    price: 2999,
    
   },
   {
@@ -152,8 +152,8 @@ let  products = [
     // quantity: 7,
     image: vision8,
     // rating: 4.8,
-    new_price: 3999,
-    old_price: 4999,
+    newPrice: 3999,
+    price: 4999,
     
   },
   // {
