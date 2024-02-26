@@ -73,6 +73,7 @@
     border: none;
     color: rebeccapurple;
     background: transparent;
+    cursor: pointer;
   }
 .loginsignup-fields{
     outline: none;

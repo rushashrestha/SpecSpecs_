@@ -9,13 +9,10 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from '
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
-<<<<<<< HEAD
 import Popular from './Components/Popular/Popular';
-=======
 import LoginSignup from './Components/Login/LoginSignup';
 
 
->>>>>>> f419b10317cce80019ca889185164b770225fc42
 
 function App() {
 
