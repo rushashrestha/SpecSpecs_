@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
 .newsletter{
     width: 65%;
     height: 40vh;
@@ -15,10 +17,12 @@
     color: #454545;
     font-size: 55px;
     font-weight: 600;
+    font-family: "Gotu", sans-serif;
 }
 .newsletter p{
     color: #454545;
     font-size: 20px;
+    font-family: "Gotu", sans-serif;
 }
 .newsletter div{
     display: flex;
@@ -39,7 +43,7 @@
     font-size: 16px;
 }
 .newsletter div button{
-    width: 210px;
+    width: 170px;
     height: 70px;
     border-radius: 80px;
     background: black;
