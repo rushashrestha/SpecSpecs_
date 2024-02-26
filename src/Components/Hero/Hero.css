@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
 .hero{
     height: 100vh;
      background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
@@ -17,11 +19,14 @@
     color: #090909 ;
     font-size: 26px;
     font-weight: 600;
+    font-family: "Gotu", sans-serif;
+
 }
 .hero-left p{
     color: #171717;
     font-size: 100px;
     font-weight: 700;
+    font-family: "Gotu", sans-serif;
 
 }
 
@@ -37,6 +42,7 @@
 }
 .hero-latest-btn{
     display: flex;
+    font-family: "Gotu", sans-serif;
     justify-content: center;
     align-items: center;
     gap: 15px ;
@@ -44,7 +50,8 @@
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
-    background: #ff4141;
+    background: transparent;
+    border: 1px solid grey;
     color: black;
     font-size: 22px;
     font-weight: 500;
