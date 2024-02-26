@@ -9,6 +9,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from '
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+import Popular from './Components/Popular/Popular';
 
 function App() {
 
@@ -28,10 +29,12 @@ function App() {
 
   return (
     <div >
+      
       <BrowserRouter>
 
      
     <Navbar/>
+    
     <Routes>
       < Route path='/' element={<Shop/>}/>
       < Route path='/mens' element={<ShopCategory category='men'/>}/>
