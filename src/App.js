@@ -9,7 +9,13 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from '
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+<<<<<<< HEAD
 import Popular from './Components/Popular/Popular';
+=======
+import LoginSignup from './Components/Login/LoginSignup';
+
+
+>>>>>>> f419b10317cce80019ca889185164b770225fc42
 
 function App() {
 
@@ -36,6 +42,7 @@ function App() {
     <Navbar/>
     
     <Routes>
+    
       < Route path='/' element={<Shop/>}/>
       < Route path='/mens' element={<ShopCategory category='men'/>}/>
       < Route path='/womens' element={<ShopCategory category='women'/>}/>
@@ -44,8 +51,9 @@ function App() {
         <Route path=':productID' element={<Product/>}/>
       </Route>
       < Route path='/cart' element={<Cart/>}/>
+      < Route path='/login' element={<LoginSignup/>}/>
       
-
+       
     </Routes>
     </BrowserRouter>
 
