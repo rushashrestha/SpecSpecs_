@@ -6,10 +6,14 @@ const ShopCategory = (props) => {
     const{allproducts} = useContext(ShopContext)
   return (
     <div className='shop-category'>
-      
-      
-
-      <img src={props.banner} alt="" />
+      <div className='banner-left'>
+      <p>Get your </p>
+      <p><h6>Spectacular Spectacles</h6></p>
+      <p>On Special <h2>Discount</h2> offers</p>
+      </div>
+      <div className='banner-right'>
+      <img src={props.banner} alt="image" />
+      </div>
     </div>
   )
 }
