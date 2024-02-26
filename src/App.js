@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Loader from './Components/Loader/loading';
 import Navbar from './Components/Navbar/Navbar';
 
+
 function App() {
 
   const [showLoader, setShowLoader] = useState(true);
