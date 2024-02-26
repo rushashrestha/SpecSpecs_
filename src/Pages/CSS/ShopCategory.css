@@ -2,6 +2,14 @@
     display: block;
     margin: 30px auto;
     width: 82%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -100;
+    padding-top: 20px;
+    padding-right: 500px;
+    
 }
 .shopcategory-indexSort{
     display: flex;
@@ -14,6 +22,9 @@
     border-radius: 40px;
     border: 1px solid #888;
 }
+.shopcategory-indexSort p span{
+    font-weight: 600;
+}
 .shopcategory-products{
     margin: 20px 170px;
     display: grid;
@@ -23,9 +34,16 @@
 .shop-category img{
     height: 250px;
     width: 250px;
+    border-radius: 70px;
     
 }
-.shop-category{
+.header{
+    display: flex;
+    background: linear-gradient(180deg, #f2d0f5 0%, #e1ffea22 60%);
+    width: 100%;
+    height: 300px;
+}
+.top{
     display: flex;
     background: linear-gradient(180deg, #f2d0f5 0%, #e1ffea22 60%);
     width: 100%;
