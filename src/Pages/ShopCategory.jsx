@@ -6,7 +6,7 @@ const ShopCategory = (props) => {
     const{allproducts} = useContext(ShopContext)
   return (
     <div className='shop-category'>
-
+      
       
     </div>
   )
