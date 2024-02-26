@@ -11,7 +11,9 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Popular from './Components/Popular/Popular';
 import LoginSignup from './Components/Login/LoginSignup';
-
+import sports_banner from './Components/Assets/Categories/sportsmod1.jpg'
+import suns_banner from './Components/Assets/Categories/sunmod1.jpg'
+import vision_banner from './Components/Assets/Categories/visionmod1.jpg'
 
 
 function App() {
@@ -41,9 +43,9 @@ function App() {
     <Routes>
     
       < Route path='/' element={<Shop/>}/>
-      < Route path='/vision' element={<ShopCategory category='vision'/>}/>
-      < Route path='/sports' element={<ShopCategory category='sports'/>}/>
-      < Route path='/sunglass' element={<ShopCategory category='sunglasses'/>}/>
+      < Route path='/vision' element={<ShopCategory banner={vision_banner}category='vision'/>}/>
+    < Route path='/sports' element={<ShopCategory banner={sports_banner}category='sports'/>}/>
+      < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='sunglasses'/>}/>
       <Route path="/product" element={<Product/>}>
         <Route path=':productID' element={<Product/>}/>
       </Route>

@@ -8,6 +8,8 @@ const ShopCategory = (props) => {
     <div className='shop-category'>
       
       
+
+      <img src={props.banner} alt="" />
     </div>
   )
 }
