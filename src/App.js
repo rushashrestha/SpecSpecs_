@@ -1,5 +1,9 @@
 
 import './App.css';
+
+import { useEffect, useState } from "react";
+
+import Loader from './Components/Loader/loading';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
@@ -7,6 +11,21 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 
 function App() {
+
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  });
+
+  if (showLoader) {
+    return <Loader/>;
+  }
+
   return (
     <div >
       <BrowserRouter>
