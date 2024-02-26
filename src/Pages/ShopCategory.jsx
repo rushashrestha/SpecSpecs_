@@ -11,7 +11,7 @@ const ShopCategory = (props) => {
       <div className='banner-left'>
       <p>Get your </p>
       <p><h6>Spectacular Spectacles</h6></p>
-      <p>On Special <h2>Discount</h2> offers</p>
+      <p>On Special <h2>Discount.......</h2> offers</p>
       </div> 
       <div className='shopcategory-banner'>
       <img src={props.banner} alt="image" />
