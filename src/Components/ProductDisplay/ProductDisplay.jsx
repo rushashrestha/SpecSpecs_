@@ -27,20 +27,21 @@ const ProductDisplay = (props) => {
                 <img src={star_icon} alt="" />
                 <img src={star_icon} alt="" />
                 {/* <img src={star_dull_icon} alt="" /> */}
-                <p>(122)</p>
+                <p>{product.rating}</p>
             </div>
             <div className="productdisplay-right-prices">
                 <div className="productdisplay-right-price-old">Rs.{product.old_price}</div>
                 <div className="productdisplay-right-price-new">Rs.{product.new_price}</div>
             </div>
             <div className="productdisplay-right-description">
-                Description
-            </div>
-            <div className="productdisplay-right-quantity">
-                <h1>Select quantity</h1>
+                {product.description}
+                <div className="productdisplay-right-brand">
+                Brand: {product.brand}
+                </div>
+                
                 
             </div>
-            <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+            <button>ADD TO CART</button>
             {/* <p className='productdisplay-right-category'><span>Category :</span></p> */}
       </div>
     </div>
