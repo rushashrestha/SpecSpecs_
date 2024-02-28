@@ -5,6 +5,7 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
     const contextValue= {allproducts}
+    console.log(allproducts)
 
     return (
         <ShopContext.Provider value={contextValue}>
