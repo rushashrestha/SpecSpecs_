@@ -9,11 +9,8 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from '
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
-import Popular from './Components/Popular/Popular';
 import LoginSignup from './Components/Login/LoginSignup';
-import sports_banner from './Components/Assets/Categories/sportsmod1.jpg'
-import suns_banner from './Components/Assets/Categories/sunmod1.jpg'
-import vision_banner from './Components/Assets/Categories/visionmod1.jpg'
+
 
 
 function App() {
@@ -54,9 +51,18 @@ function App() {
       
        
     </Routes>
+    
+    <Footer/>
+
     </BrowserRouter>
+    
+
+  
+   
+  
 
     </div>
+    
   );
 }
 
