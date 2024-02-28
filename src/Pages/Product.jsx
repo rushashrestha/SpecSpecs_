@@ -11,7 +11,7 @@ const Product = () => {
   const product = allproducts.find((e) => e.id === Number(productID));
   return (
     <div>
-      <ProductDisplay product={allproducts} />
+      {/* <ProductDisplay product={allproducts} /> */}
       <Breadcrum product={product} />
       <ProductDisplay product={product} />
     </div>
