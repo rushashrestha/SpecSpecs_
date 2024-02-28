@@ -157,7 +157,7 @@ let  allproducts = [
     
   },
   {
-    id: "8ad38385-1211-4192-8108-db851b4e9434",
+    id: 8,
     // qty: 0,
     name: "Mercury Rounded Red",
     // description:
@@ -174,7 +174,7 @@ let  allproducts = [
     
   },
   {
-    id: "c6dcde20-2e9f-470c-b76c-38b01ab7e16e",
+    id: 9,
     // qty: 0,
     name: "Candyfloss-302",
     // description:
@@ -191,7 +191,7 @@ let  allproducts = [
    
   },
   {
-    id: "c76b3840-47d2-4d38-b465-af68e2af9dcd",
+    id: 10,
     // qty: 0,
     name: "Phenomenal Mercury-02",
     // description:
@@ -208,7 +208,7 @@ let  allproducts = [
     old_price: 1299,
   },
   {
-    id: "61bf1558-94c3-4494-a522-0aad46ed5334",
+    id: 11,
     // qty: 0,
     name: "Black boss",
     // description:
