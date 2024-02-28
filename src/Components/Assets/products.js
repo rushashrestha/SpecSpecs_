@@ -47,8 +47,9 @@ let  products = [
     // quantity: 10,
     image: sports1,
     // rating: 4.5,
-    old_price: 1999,
     new_price: 1899,
+    old_price: 1999,
+    
     // trending: true,
   },
   {
@@ -164,7 +165,7 @@ let  products = [
   //     "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
   //   brand: "Carrera",
   //   category: "Vision",
-  //   gender: "Unisex",
+  //   gende: "Unisex",
   //   weight: "550g",
   //   quantity: 7,
   //   image: vision9,
