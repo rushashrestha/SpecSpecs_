@@ -10,6 +10,7 @@ import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Components/Login/LoginSignup';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -52,9 +53,10 @@ function App() {
        
     </Routes>
     
-    
-    </BrowserRouter>
+    <Footer/>
 
+    </BrowserRouter>
+    
 
   
    
