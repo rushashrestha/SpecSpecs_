@@ -40,7 +40,7 @@ const ProductDisplay = (props) => {
                 
             </div>
             
-            <button>ADD TO CART</button>
+            <button>ADD TO CARTs</button>
             {/* <p className='productdisplay-right-category'><span>Category :</span></p> */}
       </div>
     </div>
