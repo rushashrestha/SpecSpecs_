@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Loader from './Components/Loader/loading';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';import Shop from './Pages/Shop';
-
+import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Components/Login/LoginSignup';
@@ -40,8 +40,10 @@ function App() {
     
     <Routes>
     
-      < Route path='/' element={<Shop/>}/>
-      
+    < Route path='/' element={<Shop/>}/>
+      < Route path='/vision' element={<ShopCategory banner={vision_banner}category='Vision'/>}/>
+    < Route path='/sports' element={<ShopCategory banner={sports_banner}category='Sports'/>}/>
+      < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='Sunglasses'/>}/>
       <Route path="/product" element={<Product/>}>
         <Route path=':productID' element={<Product/>}/>
       </Route>

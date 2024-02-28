@@ -36,7 +36,8 @@
     margin-top: 13px;
     gap: 5px;
     color: #1c1c1c;
-    font-size: 16px;
+   
+    /* font-size: 16px; */
 }
 .productdisplay-right-star img{
     height: 10px;
