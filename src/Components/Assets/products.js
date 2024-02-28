@@ -72,7 +72,7 @@ let  products = [
     // trending: true,
   },
   {
-    _id: 3,
+    id: 3,
     // qty: 0,
     name: "Alder Street",
     // description:
@@ -90,7 +90,7 @@ let  products = [
     // trending: true,
   },
   {
-    _id: 4,
+    id: 4,
     // qty: 0,
     name: "Corral Round",
     // description:
@@ -107,7 +107,7 @@ let  products = [
    
   },
   {
-    _id: 5,
+    id: 5,
     // qty: 0,
     name: "Hyperclax Active",
     // description:
@@ -124,7 +124,7 @@ let  products = [
     
   },
   {
-    _id: 6,
+    id: 6,
     // qty: 0,
     name: "Rose Gold Chase",
     // description:
@@ -141,7 +141,7 @@ let  products = [
    
   },
   {
-    _id: 7,
+    id: 7,
     // qty: 0,
     name: "Full Rim Airflex",
     // description:
