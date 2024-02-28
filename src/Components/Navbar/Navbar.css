@@ -1,9 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Monoton&display=swap');
+
 .navbar{
     display:flex;
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
-    background-color: #f3efe6;
+    /* background-color: #f3efe6; */
 }
 .nav-logo{
     display: flex;
@@ -12,9 +15,15 @@
 }
 .nav-logo p{
     color:#6d4d38;
-    font-size: 38px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "Monoton", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
+      
+
+
 .nav-menu{
     display:flex;
     align-items: center;
@@ -22,8 +31,12 @@
     gap: 50px;
     color: #6d4d38;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 900;
+    font-family: "Gotu", sans-serif;
+
 }
+
+
 .nav-menu li{
     display: flex;
     flex-direction: column;
@@ -32,6 +45,7 @@
     gap: 3px;
     cursor: pointer;
 }
+
 .nav-menu hr{
     border:none;
     width: 80%;
@@ -56,6 +70,8 @@
     font-weight: 500;
     background: white;
     cursor: pointer;
+    font-family: "Gotu", sans-serif;
+
 }
 .nav-login-cart button:active{
     background: #f3f3f3;
