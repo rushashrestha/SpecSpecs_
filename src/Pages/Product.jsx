@@ -1,10 +1,10 @@
 
-
-import React, { useContext } from 'react'
-import ShopContext from '../Context/ShopContext'
+import React from 'react';
+import  { useContext } from 'react';
+import ShopContext from '../Context/ShopContext';
 import { useParams } from 'react-router-dom';
 import Breadcrum from '../Components/Breadcrums/Breadcrum';
-import allproducts from  '../Components/Assets/allproducts'
+
 import ProductDisplay from '../Components/ProductDisplay/ProductDisplay';
 
 

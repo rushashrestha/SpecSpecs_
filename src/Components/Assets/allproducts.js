@@ -71,7 +71,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: 3,
+    id: 3,
     // qty: 0,
     name: "Alder Street",
     // description:
@@ -89,7 +89,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: 4,
+    id: 4,
     // qty: 0,
     name: "Corral Round",
     // description:
@@ -106,7 +106,7 @@ let  allproducts = [
    
   },
   {
-    _id: 5,
+    id: 5,
     // qty: 0,
     name: "Hyperclax Active",
     // description:
@@ -123,7 +123,7 @@ let  allproducts = [
     
   },
   {
-    _id: 6,
+    id: 6,
     // qty: 0,
     name: "Rose Gold Chase",
     // description:
@@ -140,7 +140,7 @@ let  allproducts = [
    
   },
   {
-    _id: 7,
+    id: 7,
     // qty: 0,
     name: "Full Rim Airflex",
     // description:
@@ -157,7 +157,7 @@ let  allproducts = [
     
   },
   {
-    _id: "8ad38385-1211-4192-8108-db851b4e9434",
+    id: "8ad38385-1211-4192-8108-db851b4e9434",
     // qty: 0,
     name: "Mercury Rounded Red",
     // description:
@@ -174,7 +174,7 @@ let  allproducts = [
     
   },
   {
-    _id: "c6dcde20-2e9f-470c-b76c-38b01ab7e16e",
+    id: "c6dcde20-2e9f-470c-b76c-38b01ab7e16e",
     // qty: 0,
     name: "Candyfloss-302",
     // description:
@@ -191,7 +191,7 @@ let  allproducts = [
    
   },
   {
-    _id: "c76b3840-47d2-4d38-b465-af68e2af9dcd",
+    id: "c76b3840-47d2-4d38-b465-af68e2af9dcd",
     // qty: 0,
     name: "Phenomenal Mercury-02",
     // description:
@@ -208,7 +208,7 @@ let  allproducts = [
     old_price: 1299,
   },
   {
-    _id: "61bf1558-94c3-4494-a522-0aad46ed5334",
+    id: "61bf1558-94c3-4494-a522-0aad46ed5334",
     // qty: 0,
     name: "Black boss",
     // description:
@@ -226,7 +226,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: "9e3419eb-e5f6-4813-8bf4-6d72b6498235",
+    id: "9e3419eb-e5f6-4813-8bf4-6d72b6498235",
     // qty: 0,
     name: "Blue Ray Wayfarer",
     // description:
@@ -243,7 +243,7 @@ let  allproducts = [
     
   },
   {
-    _id: "c39a126c-783e-4926-bedd-0b2174307d9c",
+    id: "c39a126c-783e-4926-bedd-0b2174307d9c",
     // qty: 0,
     name: "Pernik",
     // description:
@@ -260,7 +260,7 @@ let  allproducts = [
     old_price: 2499,
   },
   {
-    _id: "2e792ac4-13a7-4d70-a9a5-55294e346404",
+    id: "2e792ac4-13a7-4d70-a9a5-55294e346404",
     // qty: 0,
     name: "Silistra",
     // description:
@@ -277,7 +277,7 @@ let  allproducts = [
    
   },
   {
-    _id: "a84d980e-cf9e-4607-b74d-68f7a1c45771",
+    id: "a84d980e-cf9e-4607-b74d-68f7a1c45771",
     // qty: 0,
     name: "Full rim acetate black",
     // description:
@@ -294,7 +294,7 @@ let  allproducts = [
     old_price: 1999,
   },
   {
-    _id: "1c9bd0c1-b300-4358-9eb4-43a70e392859",
+    id: "1c9bd0c1-b300-4358-9eb4-43a70e392859",
     // qty: 0,
     name: "Ruse",
     // description:
@@ -311,7 +311,7 @@ let  allproducts = [
     old_price: 1499,
   },
   {
-    _id: "08617c37-e290-4296-b558-2db509201361",
+    id: "08617c37-e290-4296-b558-2db509201361",
     // qty: 0,
     name: "Yambol",
     // description:
@@ -328,7 +328,7 @@ let  allproducts = [
     old_price: 2999,
   },
   {
-    _id: "5f73b408-aa98-4f54-a15b-7a7425a038d5",
+    id: "5f73b408-aa98-4f54-a15b-7a7425a038d5",
     // qty: 0,
     name: "Roadies Rd-202",
     // description:
@@ -345,7 +345,7 @@ let  allproducts = [
     old_price: 4999,
   },
   {
-    _id: "bb2ad041-b53a-49a8-835d-e84300e6fbd2",
+    id: "bb2ad041-b53a-49a8-835d-e84300e6fbd2",
     // qty: 0,
     name: "Burgas",
     // description:
@@ -362,7 +362,7 @@ let  allproducts = [
     old_price: 4999,
   },
   {
-    _id: "6c800171-bea6-4cb2-811d-7c419a59dcb8",
+    id: "6c800171-bea6-4cb2-811d-7c419a59dcb8",
     // qty: 0,
     name: "Hip Hop Candy",
     // description:
@@ -380,7 +380,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: "9ca598d9-7cb5-4fb0-8455-b43028f9cb96",
+    id: "9ca598d9-7cb5-4fb0-8455-b43028f9cb96",
     // qty: 0,
     name: "Punk Cut Out",
     // description:
@@ -398,7 +398,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: "51db0e19-b0e0-4d6e-bce0-739f1bd37ba7",
+    id: "51db0e19-b0e0-4d6e-bce0-739f1bd37ba7",
     // qty: 0,
     name: "Rounded Gold",
     // description:
@@ -416,7 +416,7 @@ let  allproducts = [
     // trending: true,
   },
   {
-    _id: "35332c85-f853-407a-80f8-840069381a0d",
+    id: "35332c85-f853-407a-80f8-840069381a0d",
     // qty: 0,
     name: "Jungle Safari",
     // description:
@@ -433,7 +433,7 @@ let  allproducts = [
     old_price: 2999,
   },
   {
-    _id: "53ca5f50-39f4-4c77-be14-c3246cfc5dc6",
+    id: "53ca5f50-39f4-4c77-be14-c3246cfc5dc6",
     // qty: 0,
     name: "Burgas",
     // description:
@@ -450,7 +450,7 @@ let  allproducts = [
     old_price: 4999,
   },
   {
-    _id: "a0a1ca71-d121-48af-a463-4ee790df28de",
+    id: "a0a1ca71-d121-48af-a463-4ee790df28de",
     // qty: 0,
     name: "Sofia",
     // description:
@@ -467,7 +467,7 @@ let  allproducts = [
     old_price: 4999,
   },
   {
-    _id: "2b5f4f03-7ec7-4a5c-b2a7-14dbcc4f2f6b",
+    id: "2b5f4f03-7ec7-4a5c-b2a7-14dbcc4f2f6b",
     // qty: 0,
     name: "Plovediv",
     // description:
@@ -484,7 +484,7 @@ let  allproducts = [
     old_price: 4999,
   },
   {
-    _id: "440cec02-21e1-4447-bdd9-d51482b7ce4b",
+    id: "440cec02-21e1-4447-bdd9-d51482b7ce4b",
     // qty: 0,
     name: "Airway Black",
     // description:
@@ -501,7 +501,7 @@ let  allproducts = [
     old_price: 2499,
   },
   {
-    _id: "77f519a8-a40f-443d-8c9e-5314b24cf06d",
+    id: "77f519a8-a40f-443d-8c9e-5314b24cf06d",
     // qty: 0,
     name: "Cat-eyed Gold",
     // description:
@@ -518,7 +518,7 @@ let  allproducts = [
     old_price: 3999,
   },
   {
-    _id: "11a2bfb4-2acf-40da-a12f-60dfcce8ed95",
+    id: "11a2bfb4-2acf-40da-a12f-60dfcce8ed95",
     // qty: 0,
     name: "Full Rim Steel Gray",
     // description:
