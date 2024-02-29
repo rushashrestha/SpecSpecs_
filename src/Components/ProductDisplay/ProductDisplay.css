@@ -75,8 +75,11 @@
     border: none;
     outline: none;
     cursor: pointer;
-
 }
+.productdisplay-right button:hover{
+    color: #642828;
+}
+
 .productdisplay-right-brand{
     color: rgb(164, 109, 109);
     padding-top: 20px;
