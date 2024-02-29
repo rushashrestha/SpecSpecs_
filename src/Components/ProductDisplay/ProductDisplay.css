@@ -16,8 +16,9 @@
 
 }
 .productdisplay-main-img{
-    width: 572px;
-    height: 700px;
+    width: 600px;
+    height: 500px;
+    padding-top: 100px;
 }
 
 .productdisplay-right{
