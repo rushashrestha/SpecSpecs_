@@ -27,15 +27,9 @@ const Navbar = () => {
           alt=""
         />
       </div> */}
-      <ul ref={menuRef} className="nav-menu">
-        <li
-          onClick={() => {
-            setMenu("shop");
-          }}
-        >
-          <Link style={{ textDecoration: "none" }} to="/">
-            Shop
-          </Link>{" "}
+      <ul className="nav-menu">
+        <li onClick={() => {setMenu("shop");}} >
+          <Link style={{ textDecoration: "none" }} to="/">Shop</Link>{" "}
           {menu == "shop" ? <hr /> : <></>}
         </li>
         <li
