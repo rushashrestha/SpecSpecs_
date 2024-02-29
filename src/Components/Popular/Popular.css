@@ -8,6 +8,18 @@
     height: 90vh;
 
 }
+.popular-item{
+    /* border: 1px solid black; */
+   
+    margin-left: 80px;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    
+    /* overflow-x: scroll; */
+}
 .popular h1{
     color: #171717;
     font-size: 50px;
@@ -21,9 +33,4 @@
     border-radius: 10px;
     background: #252525;
 
-}
-.popular-item{
-    margin: 50px;
-    display: flex;
-    gap: 30px;
 }
