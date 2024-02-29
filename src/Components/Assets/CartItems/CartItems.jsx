@@ -6,7 +6,7 @@ const CartItems = () => {
     const {getTotalCartAmount,allproducts,cartItems,removeFromCart} = useContext(ShopContext)
     return(
         <div className="cartitems">
-            <div className="classitems-format-main">
+            <div className="cartitems-format-main">
                 <p>Products</p>
                 <p>Title</p>
                 <p>Price</p>
