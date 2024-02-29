@@ -1,10 +1,12 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 .footer{
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
     gap:10px;
-    background-color: #e78ee13e;
+    background-color: white;
     width:100%;
 }
 .footer-logo{
@@ -17,15 +19,16 @@
 }
 .footer-logo h3{
     color:#3e3211;
-    font-size:46px ;
-    font-weight: 700;
-    
+    font-size:40px ;
+    font-weight: 1;
+    font-family: "Monoton", sans-serif;
 
 }
 .footer-logo p{
     color:#1c1a14;
     font-size:15px ;
-    font-weight: 700;
+    font-weight: 500;
+    font-family: "Gotu", sans-serif;
 }
 .footer-links{
     display: flex;
@@ -33,34 +36,40 @@
     gap: 50px;
     color: #252525;
     font-size: 20px;
+    font-family: "Gotu", sans-serif;
 
 }
+
 .footer-links li{
     cursor:pointer;
 }
-.footer-social-icons{
-    display:flex;
-    gap:20px;
+.footer-links a{
+    list-style: none;
+    margin-left: 20px;
+    margin-bottom: -9px;
+    margin-top: -9px;
+    text-decoration: none;
 }
-.fbicons{
-    padding:10px;
-    padding-bottom: 6px;
-    padding-left: 3px;
-    background:#fbfbfb;
-}
-.igicons{
-    padding:10px;
-    padding-bottom: 6px;
-    padding-left: 3px;
-    background:#fbfbfb;
-    
-}
+
+
 .giicons{
     padding:10px;
     padding-bottom: 6px;
     padding-left: 3px;
-    background:#fbfbfb;
-    
+    color: black;
+    padding-top: 13px;
+
+}
+.giicons:hover{ animation: bounce 1s infinite;}
+    @keyframes bounce {
+        0%{transform: translateY(0);}
+        40%{transform: translateY(-20px);}
+        60%{transform: translateY(-10px);}
+    /* -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    color: black; */
+
 }
 .footer-copyright{
     display: flex;
@@ -69,10 +78,22 @@
     gap:30px;
     width:100%;
     margin-bottom: 30px;
-    color:#1a1a1a;
+    color:#686565;
     font-size: 20px;
+    font-family: "Gotu", sans-serif;
 }
 .footer-copyright hr{
+    width:80%;
+    border:none;
+    border-radius: 10px;
+    height:3px;
+    background: #c7c7c7;
+}
+.name-list{
+    display: flex;
+    gap: 2px;
+}
+.footer-logo hr{
     width:80%;
     border:none;
     border-radius: 10px;

@@ -1,13 +1,13 @@
 import React from 'react'
 import './Footer.css'
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 
 
 const Footer = () => {
     return (
         <div className='footer'>
             <div className="footer-logo">
-
+            <hr />
                 <h3>SpecSpecs</h3>
 
 
@@ -17,30 +17,36 @@ const Footer = () => {
 
             </div>
             <ul className="footer-links">
-                <li>Company</li>
-                <li>About us</li>
-                <li>Products</li>
-                <li>Offices</li>
-                <li>Contact</li>
-            </ul>
-            <div className="footer-social-icons">
-                <li>
-                    <a href='https://www.facebook.com/'>
-                        <FaFacebook className="fbicons" />
-
-                    </a>
-                </li>
-                <li>
-                    <a href='https://www.instagram.com/'>
-                        <FaInstagram className="igicons" />
-                    </a>
-                </li>
-                <li>
-                    <a href='https://github.com/'>
+                <div className="name-list">
+                <li>Rusha</li>
+                <a href="https://github.com/rushashrestha" target="-blank">
+                    <FaGithub className="giicons" />{" "}
+                  </a>
+                </div>
+               
+               <div className="name-list">
+               <li>Manjila</li>
+                <a href='https://github.com/manjilaaa'>
                         <FaGithub className="giicons" />
                     </a>
-                </li>
-            </div>
+               </div>
+               
+               <div className="name-list">
+               <li>Mandira</li>
+                <a href='https://github.com/Mandira-Shiwakoti'>
+                        <FaGithub className="giicons" />
+                    </a>
+               </div>
+                
+                <div className="name-list">
+                <li>Dipika</li>
+                <a href='https://github.com/dpkaaaaa'>
+                        <FaGithub className="giicons" />
+                    </a>
+                </div>
+                
+            </ul>
+       
             <div className="footer-copyright">
                 <hr />
                 <p>Copyright @ 2024 - All Rights Reserved</p>
