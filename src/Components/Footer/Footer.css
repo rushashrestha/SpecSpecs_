@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Monoton&display=swap');
 .footer{
     display: flex;
     flex-direction:column;
@@ -19,6 +21,9 @@
     color:#3e3211;
     font-size:46px ;
     font-weight: 700;
+    font-family: 'Gotu';
+    font-weight: 100;
+    font-style:initial;
     
 
 }
