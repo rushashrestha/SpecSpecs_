@@ -26,21 +26,21 @@ const Footer = () => {
                
                <div className="name-list">
                <li>Manjila</li>
-                <a href='https://github.com/manjilaaa'>
+                <a href='https://github.com/manjilaaa' target="-blank">
                         <FaGithub className="giicons" />
                     </a>
                </div>
                
                <div className="name-list">
                <li>Mandira</li>
-                <a href='https://github.com/Mandira-Shiwakoti'>
+                <a href='https://github.com/Mandira-Shiwakoti' target="-blank">
                         <FaGithub className="giicons" />
                     </a>
                </div>
                 
                 <div className="name-list">
                 <li>Dipika</li>
-                <a href='https://github.com/dpkaaaaa'>
+                <a href='https://github.com/dpkaaaaa' target="-blank">
                         <FaGithub className="giicons" />
                     </a>
                 </div>
