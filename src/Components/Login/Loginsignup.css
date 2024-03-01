@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 10ovh;
     
     /* background: linear-gradient(
         rgba(255, 255, 255, 0.7),
@@ -16,21 +16,28 @@
     
 }
 .loginsignup-container{
-    background: transparent;
+    /* background: transparent; */
     backdrop-filter: blur(10px);
     border: 1px solid gray;
     padding: 0px 60px;
     border-radius: 8px;
     width: 300px;
-    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%); 
 }
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
+    gap: 1px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+    background: transparent;
+    
+   
   }
   
   .text {
@@ -82,6 +89,7 @@
     flex-direction: column;
     width: 280px;
     align-items: center;
+    gap: 2px;
 }
 input{
     padding: 15px;
