@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
-=======
 @import url('https://fonts.googleapis.com/css2?family=Gotu&family=Monoton&display=swap');
->>>>>>> 2b8eca1e40ccd77ac17015ea59864948aa242764
 .footer{
     display: flex;
     flex-direction:column;
@@ -23,18 +20,15 @@
 }
 .footer-logo h3{
     color:#3e3211;
-<<<<<<< HEAD
     font-size:40px ;
     font-weight: 1;
     font-family: "Monoton", sans-serif;
-=======
     font-size:46px ;
     font-weight: 700;
     font-family: 'Gotu';
     font-weight: 100;
     font-style:initial;
     
->>>>>>> 2b8eca1e40ccd77ac17015ea59864948aa242764
 
 }
 .footer-logo p{

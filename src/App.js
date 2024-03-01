@@ -11,15 +11,12 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Components/Login/LoginSignup';
 import Footer from './Components/Footer/Footer';
-<<<<<<< HEAD
 import vision_banner from'./Components/Assets/Categories/visionmod1.jpg';
 import sports_banner from'./Components/Assets/Categories/sunmod1.jpg';
 import suns_banner from'./Components/Assets/Categories/sportsmod1.jpg';
-=======
 
 
 
->>>>>>> 2b8eca1e40ccd77ac17015ea59864948aa242764
 function App() {
 
   const [showLoader, setShowLoader] = useState(true);
@@ -46,15 +43,12 @@ function App() {
     
     <Routes>
     
-<<<<<<< HEAD
     < Route path='/' element={<Shop/>}/>
       < Route path='/vision' element={<ShopCategory banner={vision_banner}category='Vision'/>}/>
     < Route path='/sports' element={<ShopCategory banner={sports_banner}category='Sports'/>}/>
       < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='Sunglasses'/>}/>
-=======
       < Route path='/' element={<Shop/>}/>
      
->>>>>>> 2b8eca1e40ccd77ac17015ea59864948aa242764
       <Route path="/product" element={<Product/>}>
       <Route path=':productID' element={<Product/>}/>
       </Route>
