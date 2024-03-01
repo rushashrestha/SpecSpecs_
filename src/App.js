@@ -14,6 +14,9 @@ import Footer from './Components/Footer/Footer';
 import vision_banner from'./Components/Assets/Categories/visionmod1.jpg';
 import sports_banner from'./Components/Assets/Categories/sunmod1.jpg';
 import suns_banner from'./Components/Assets/Categories/sportsmod1.jpg';
+
+
+
 function App() {
 
   const [showLoader, setShowLoader] = useState(true);
@@ -44,8 +47,10 @@ function App() {
       < Route path='/vision' element={<ShopCategory banner={vision_banner}category='Vision'/>}/>
     < Route path='/sports' element={<ShopCategory banner={sports_banner}category='Sports'/>}/>
       < Route path='/sunglass' element={<ShopCategory banner={suns_banner}category='Sunglasses'/>}/>
+      < Route path='/' element={<Shop/>}/>
+     
       <Route path="/product" element={<Product/>}>
-        <Route path=':productID' element={<Product/>}/>
+      <Route path=':productID' element={<Product/>}/>
       </Route>
       < Route path='/cart' element={<Cart/>}/>
       < Route path='/login' element={<LoginSignup/>}/>
