@@ -12,8 +12,8 @@ import Cart from './Pages/Cart';
 import LoginSignup from './Components/Login/LoginSignup';
 import Footer from './Components/Footer/Footer';
 import vision_banner from'./Components/Assets/Categories/visionmod1.jpg';
-import sports_banner from'./Components/Assets/Categories/sunmod1.jpg';
-import suns_banner from'./Components/Assets/Categories/sportsmod1.jpg';
+import sports_banner from'./Components/Assets/Categories/sportsmod1.jpg';
+import suns_banner from'./Components/Assets/Categories/sunmod1.jpg';
 
 
 
