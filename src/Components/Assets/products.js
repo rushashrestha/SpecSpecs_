@@ -140,23 +140,7 @@ let  products = [
     old_price: 2999,
    
   },
-  {
-    id: 7,
-    // qty: 0,
-    name: "Full Rim Airflex",
-    // description:
-    //   "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
-    // brand: "Carrera",
-    // category: "Vision",
-    // gender: "Unisex",
-    // weight: "550g",
-    // quantity: 7,
-    image: vision8,
-    // rating: 4.8,
-    new_price: 3999,
-    old_price: 4999,
-    
-  },
+  
   // {
   //   _id: "8ad38385-1211-4192-8108-db851b4e9434",
   //   qty: 0,

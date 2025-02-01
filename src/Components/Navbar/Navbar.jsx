@@ -5,6 +5,8 @@ import cart from "../Assets/cart.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/down.png";
+import SearchBar from './SearchBar';
+
 const Navbar = () => {
   const [menu, setMenu] = useState();
   const { getTotalCartItems } = useContext(ShopContext);
@@ -27,6 +29,7 @@ const Navbar = () => {
         src={nav_dropdown}
         alt=""
       />
+       <SearchBar />
       <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {

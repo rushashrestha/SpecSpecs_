@@ -1,78 +1,101 @@
-.item{
-    width: 280px;
-
-}
-.item img{
-    width: 280px;
-}
-.item p{
-    margin: 6px 0px ;
-
-}
-.items-prices{
+.item {
+    width: 400px;
+    border: 1px solid gray;
+    height: 300px;
     display: flex;
-    gap:20px
+    flex-direction: column; /* Stack image and text */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
 }
-.item-price-new{
+
+.items-images {
+    height: 120px; /* Increase size for visibility */
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.items-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image fills its container */
+    border-radius: 8px;
+}
+
+.imgbox {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.item p {
+    margin: 6px 0px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.items-prices {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.item-price-new {
     color: #374151;
     font-size: 18px;
     font-weight: 600;
 }
-.item-price-old{
+
+.item-price-old {
     color: #8c8c8c;
     font-size: 18px;
     font-weight: 500;
     text-decoration: line-through;
 }
-.item :hover{
+
+.item:hover {
     transform: scale(1.05);
     transition: 0.6s;
 }
-.item img{
-    max-width: 30%;
+
+.item img {
+    max-width: 100%; /* Ensures image responsiveness */
 }
-@media(max-width:1280px){
-    .items{
-        padding-left: 100px;
+
+/* ✅ Responsive Fixes */
+@media (max-width: 1024px) {
+    .item {
+        width: 300px;
+    }
+    .items-images {
+        height: 100px;
         width: 100px;
-        font-size: 14px;
-    }
-    .item img{
-        width: 220px;
     }
 }
-@media(max-width:1024px){
-    .item{
-        width: 170px;
-        font-size: 13px;
+
+@media (max-width: 768px) {
+    .item {
+        width: 250px;
     }
-    .item img{
-        width: 170px;  
-    }
-    .item-price-old{
-        font-size: 13px;
-    }
-}
-@media(max-width:800px){
-    .item{
-        width: 100px;
-        font-size: 12px;
-    }
-    .item img{
-        width: 100px;  
-    }
-    .item-price-old{
-        font-size: 12px;
-    }
-    .item-price-new{
-        font-size: 12px;
-    }
-}
-@media(max-width:500px){
-    .item{
+    .items-images {
+        height: 80px;
         width: 80px;
     }
-    .item img{
-        width: 80px;
+}
+
+@media (max-width: 500px) {
+    .item {
+        width: 200px;
+    }
+    .items-images {
+        height: 60px;
+        width: 60px;
     }
 }
