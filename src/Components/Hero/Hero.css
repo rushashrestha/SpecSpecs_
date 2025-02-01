@@ -1,62 +1,155 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 
-.hero{
-    height: 100vh;
-     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
-     display: flex;
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 10%; /* Equal left and right spacing */
 }
-.hero-left{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding-left: 180px;
-    line-height: 1.1;
 
-}
-.hero-left h2{
-    color: #090909 ;
-    font-size: 26px;
-    font-weight: 600;
-    font-family: "Gotu", sans-serif;
-
-}
-.hero-left p{
-    color: #171717;
-    font-size: 100px;
-    font-weight: 700;
-    font-family: "Gotu", sans-serif;
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  line-height: 1.1;
+  margin-top: -160px;
 
 }
 
-.hero-right{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: -100;
+.hero-left h2 {
+  color: #090909;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Gotu", sans-serif;
+  margin-bottom: 25px;
+}
 
+.hero-left p {
+  color: #171717;
+  font-size: 80px;
+  font-weight: 800;
+  font-family: "Gotu", sans-serif;
+  margin-bottom: 25px;
+}
 
+.hero-right {
+  display: flex;
+  justify-content: center;
+width: 500px;
+height: 500px;
+margin-top: 40px;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-latest-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 300px;
+  height: 60px;
+  border-radius: 20px;
+  background: transparent;
+  color:#788270;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #F4F4F4;
+  border: rgb(190, 187, 187) 1px solid;
+  transition: 0.5s;
+
+  
+}
+.hero-latest-btn:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Creates the floating effect */
 
 }
-.hero-latest-btn{
-    display: flex;
-    font-family: "Gotu", sans-serif;
-    justify-content: center;
-    align-items: center;
-    gap: 15px ;
-    width: 310px;
-    height: 70px;
-    border-radius: 75px;
-    margin-top: 30px;
-    background: transparent;
-    border: 1px solid grey;
-    color: black;
+
+.hero-latest-btn img {
+  max-height: 40%;
+}
+
+/* ============== RESPONSIVE DESIGN ============== */
+@media (max-width: 1280px) {
+  .hero {
+    padding: 0 5%;
+  }
+  .hero-left h2 {
     font-size: 22px;
-    font-weight: 500;
-
+  }
+  .hero-left p {
+    font-size: 60px;
+  }
+  .hero-latest-btn {
+    width: 250px;
+    height: 55px;
+    font-size: 18px;
+  }
+  .hero-right img {
+    width: 450px;
+  }
 }
-.hero-latest-btn img{
-    max-height: 50%;
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 0 5%;
+  }
+  .hero-left p {
+    font-size: 50px;
+  }
+  .hero-latest-btn {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .hero-right img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left {
+    align-items: center;
+  }
+  .hero-left h2 {
+    font-size: 18px;
+  }
+  .hero-left p {
+    font-size: 40px;
+  }
+  .hero-latest-btn {
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+  }
+  .hero-right img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-right {
+    display: none;
+  }
+  .hero-left h2 {
+    font-size: 18px;
+  }
+  .hero-left p {
+    font-size: 30px;
+  }
+  .hero-latest-btn {
+    width: 200px;
+    height: 45px;
+    font-size: 14px;
+  }
 }
