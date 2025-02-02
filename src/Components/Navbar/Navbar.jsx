@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
-import cart from "../Assets/cart.png";
+import cart from "../Assets/shopping-bag.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/down.png";
@@ -39,9 +39,11 @@ const Navbar = () => {
         <Link to="/Login">
           <button>Login</button>
         </Link>
+        <div className="cart-image">
         <Link to="/cart">
           <img src={cart} alt=""></img>{" "}
         </Link>
+        </div>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
