@@ -12,6 +12,11 @@
   margin-bottom: 20px; /* Add margin to prevent overlap */
 }
 
+.heropara{
+  font-size: 20px;
+  font-family: "Gotu", cursive;
+}
+
 .typewriter {
   font-size: 70px;
   color: black;
@@ -29,7 +34,7 @@
 
 .hero-left h2 {
   color: #090909;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   font-family: "Gotu", sans-serif;
   margin-bottom: 15px;

@@ -49,8 +49,8 @@ const ProductDisplay = () => {
             
           </div>
           <div className="product-price">
-            <span className="new-price">₹{product.new_price}</span>
-            <span className="old-price">₹{product.old_price}</span>
+            <span className="new-price">रु{product.new_price}</span>
+            <span className="old-price">रु{product.old_price}</span>
           </div>
           <div className="product-actions">
             <button className="add-to-cart" onClick={() => addToCart(product.id)}>

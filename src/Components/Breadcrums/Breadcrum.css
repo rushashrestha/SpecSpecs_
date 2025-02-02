@@ -5,6 +5,7 @@
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
+    margin-top: 100px; /* Adjust based on navbar height */
     margin: 0; /* Reset margins */
     padding: 0; /* Reset padding */
     align-self: flex-start; /* Align to the left */

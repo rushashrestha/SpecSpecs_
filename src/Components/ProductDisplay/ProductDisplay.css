@@ -20,6 +20,11 @@
     width: 80%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.productdisplay-container{
+    margin-top: 70px;
+}
+
 .breadcrum{
     align-self: flex-start; /* Align breadcrumb to the left */
     width: 100%; /* Ensure it takes full width */

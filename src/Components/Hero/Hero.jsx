@@ -22,8 +22,10 @@ const Hero = () => {
         }}
       />
         </div>
-       
-        {/* <p>Buy the best high-quality sunglasses from us. </p> */}
+       <div className="heropara">
+       <p>Get Your Spectacular Specs From US. </p>
+       </div>
+     
         
       
         <div className="hero-latest-btn">
