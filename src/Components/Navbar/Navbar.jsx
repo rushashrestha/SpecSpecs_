@@ -34,7 +34,7 @@ const Navbar = () => {
         alt=""
       />
        <SearchBar />
-      <ul ref={menuRef} className="nav-menu">
+      {/* <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {
             setMenu("shop");
@@ -76,7 +76,7 @@ const Navbar = () => {
           </Link>
           {menu === "sunglass" ? <hr /> : <></>}
         </li>
-      </ul>
+      </ul> */}
       <div className="nav-login-cart">
         <Link to="/Login">
           <button>Login</button>
