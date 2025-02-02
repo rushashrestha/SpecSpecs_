@@ -2,9 +2,8 @@
 
 .loginsignup{
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
     
     /* background: linear-gradient(
         rgba(255, 255, 255, 0.7),
@@ -13,6 +12,7 @@
       url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-size: cover; */
     background-position: center;
+    margin: 70px 0px ;
     
 }
 .loginsignup-container{
@@ -21,7 +21,7 @@
     border: 1px solid gray;
     padding: 0px 60px;
     border-radius: 8px;
-    width: 300px;
+    width: 450px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 .header {
@@ -31,6 +31,9 @@
     gap: 9px;
     width: 100%;
     margin-top: 30px;
+    height: 80px;
+    background: transparent;
+
   }
   
   .text {

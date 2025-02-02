@@ -6,7 +6,9 @@
     background: #e2e2e2;
     border: 0;
 }
+
 .cartitems-format-main{
+
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;

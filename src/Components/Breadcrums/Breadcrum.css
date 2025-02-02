@@ -1,13 +1,17 @@
-.breadcrum{
+.breadcrum {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #5e5e5e;
     font-size: 16px;
-    font-weight: 600;
-    margin: 60px 170px;
+    font-weight: 500;
     text-transform: capitalize;
-}
-.breadcrum img{
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+    align-self: flex-start; /* Align to the left */
+    justify-content: flex-start; /* Align to the top */
+  }
+  
+  .breadcrum img {
+    width: 10px;
     height: 10px;
-}
+  }

@@ -1,29 +1,76 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
-.popular{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 90vh;
 
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto; /* Adjust height to auto */
+  justify-content: center;
+  z-index: 1;
+  padding: 20px 0; /* Add padding to prevent overlap */
 }
-.popular h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-    font-family: "Gotu", sans-serif;
-    
-}
-.popular hr{
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
 
+.popular-item {
+  margin: 10px auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
 }
-.popular-item{
-    margin: 50px;
-    display: flex;
-    gap: 30px;
+
+.popular h1 {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: "Gotu", sans-serif;
+}
+
+.popular hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+@media (max-width: 1280px) {
+  .popular {
+    height: auto;
+  }
+  .popular h1 {
+    font-size: 40px;
+  }
+  .popular hr {
+    width: 160px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular {
+    height: auto;
+  }
+  .popular h1 {
+    font-size: 30px;
+  }
+  .popular hr {
+    width: 120px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 800px) {
+  .popular {
+    height: auto;
+    gap: 6px;
+  }
+  .popular h1 {
+    font-size: 30px;
+  }
+  .popular hr {
+    width: 120px;
+    height: 3px;
+  }
 }
