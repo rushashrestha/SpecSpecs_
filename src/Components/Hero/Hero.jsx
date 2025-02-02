@@ -3,6 +3,7 @@ import "./Hero.css";
 import arrow_icon from "../Assets/arrow_icon.png";
 import hero_image from "../Assets/hero_image.png";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom"; 
 
 const Hero = () => {
   return (
@@ -29,8 +30,10 @@ const Hero = () => {
         
       
         <div className="hero-latest-btn">
+        <Link to="/popular" className="hero-latest-btn">
           <div>Latest Collection</div>
           <img src={arrow_icon} alt="Arrow Icon" />
+        </Link>
         </div>
       </div>
       <div className="hero-right">

@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 
 .hero {
-  height: 100vh;
+  height: 80vh; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10%;
+  padding: 5% 10%;
   gap: 20px;
-  z-index: 2;
-  margin-bottom: 20px; /* Add margin to prevent overlap */
+  margin-bottom: 0.1px; 
 }
 
 .heropara{
@@ -44,11 +43,11 @@
   display: flex;
   justify-content: center;
   flex: 1;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .hero-right img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   object-fit: contain;
 }
@@ -79,6 +78,13 @@
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    height: 70vh; /* Further reducing height */
+    padding: 4% 8%;
+  }
+  .hero-right img {
+    max-width: 60%;
+  }
   .typewriter {
     font-size: 50px;
   }

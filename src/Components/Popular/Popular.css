@@ -8,7 +8,7 @@
   height: auto; /* Adjust height to auto */
   justify-content: center;
   z-index: 1;
-  padding: 20px 0; /* Add padding to prevent overlap */
+  padding: 0px 0; /* Add padding to prevent overlap */
 }
 
 .popular-item {
