@@ -35,6 +35,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="/" element={<Shop/>}></Route>
           <Route
             path="/vision"
             element={<ShopCategory banner={vision_banner} category="Vision" />}

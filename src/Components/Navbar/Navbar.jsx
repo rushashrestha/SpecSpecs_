@@ -19,10 +19,14 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="nav-logo">
+      <Link to ='/' className="nav-logo">
+      {/* <div className=""> */}
         <img width={50} src={logo} alt="" />
         <p>SPECSPECS</p>
-      </div>
+      {/* </div> */}
+
+      </Link>
+      
       <img
         className="nav-dropdown"
         onClick={dropdown_toggle}

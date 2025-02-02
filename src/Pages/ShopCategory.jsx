@@ -14,6 +14,7 @@ const ShopCategory = (props) => {
        
       </div>
 
+
       <div className="shopcategory-indexSort"></div>
       <h1 className="our-product">Our Products</h1>
       <div className="shopcategory-product">
