@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
 .popular {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 90vh;
+  height: auto; /* Adjust height to auto */
   justify-content: center;
+  z-index: 1;
+  padding: 20px 0; /* Add padding to prevent overlap */
 }
+
 .popular-item {
   margin: 10px auto;
   display: flex;
@@ -16,21 +20,24 @@
   justify-content: center;
   align-items: center;
 }
+
 .popular h1 {
   color: #171717;
   font-size: 50px;
   font-weight: 600;
   font-family: "Gotu", sans-serif;
 }
+
 .popular hr {
   width: 200px;
   height: 6px;
   border-radius: 10px;
   background: #252525;
 }
+
 @media (max-width: 1280px) {
   .popular {
-    height: 70vh;
+    height: auto;
   }
   .popular h1 {
     font-size: 40px;
@@ -40,22 +47,23 @@
     height: 4px;
   }
 }
+
 @media (max-width: 1024px) {
   .popular {
-    height: 60vh;
+    height: auto;
   }
   .popular h1 {
     font-size: 30px;
   }
-  
   .popular hr {
     width: 120px;
     height: 3px;
   }
 }
-@media (max-width: 800pxx) {
+
+@media (max-width: 800px) {
   .popular {
-    height: 50vh;
+    height: auto;
     gap: 6px;
   }
   .popular h1 {

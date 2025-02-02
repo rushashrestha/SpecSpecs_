@@ -1,101 +1,84 @@
-.item {
-    width: 400px;
-    border: 1px solid gray;
-    height: 300px;
-    display: flex;
-    flex-direction: column; /* Stack image and text */
-    align-items: center;
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures 3 items per row */
+    gap: 20px; /* Adds space between items */
     justify-content: center;
-    padding: 10px;
+    max-width: 900px; /* Adjust this based on your design */
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .items {
+        grid-template-columns: repeat(3, 1fr); /* Forces 3 items per row on larger screens */
+    }
+}
+
+
+.item {
+    
+    width: 280px;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    padding: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
 .items-images {
-    height: 120px; /* Increase size for visibility */
-    width: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.items-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure image fills its container */
-    border-radius: 8px;
-}
-
-.imgbox {
     width: 100px;
     height: 100px;
-    background-position: center;
-    background-size: cover;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
 }
 
-.item p {
-    margin: 6px 0px;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
+.items-images:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
-.items-prices {
+.item-details {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.item-header {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.add-button {
+    background-color: #c49a6c;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.item-prices {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .item-price-new {
-    color: #374151;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .item-price-old {
-    color: #8c8c8c;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    color: #888;
     text-decoration: line-through;
 }
 
-.item:hover {
-    transform: scale(1.05);
-    transition: 0.6s;
-}
-
-.item img {
-    max-width: 100%; /* Ensures image responsiveness */
-}
-
-/* ✅ Responsive Fixes */
-@media (max-width: 1024px) {
-    .item {
-        width: 300px;
-    }
-    .items-images {
-        height: 100px;
-        width: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .item {
-        width: 250px;
-    }
-    .items-images {
-        height: 80px;
-        width: 80px;
-    }
-}
-
-@media (max-width: 500px) {
-    .item {
-        width: 200px;
-    }
-    .items-images {
-        height: 60px;
-        width: 60px;
-    }
+.item-category {
+    font-size: 14px;
+    color: gray;
 }
