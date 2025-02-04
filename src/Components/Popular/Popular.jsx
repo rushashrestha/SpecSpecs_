@@ -5,7 +5,8 @@ import Item from "../Item/Item";
 
 const Popular = () => {
   return (
-    <div className="popular">
+    <div id="popular-products">
+        <div className="popular">
       <h1>POPULAR PPRODUCTS</h1>
       <hr />
       <div className="popular-item">
@@ -23,6 +24,8 @@ const Popular = () => {
         })}
       </div>
     </div>
+    </div>
+    
   );
 };
 

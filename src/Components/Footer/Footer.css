@@ -1,56 +1,64 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Gotu&family=Monoton&display=swap');
-.footer{
+.footer {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
     background-color: white;
-    width:100%;
+    width: 100%;
+    padding-top: 50px; /* Added space at the top */
 }
-.footer-logo{
-    display:flex;
+
+.footer-logo {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
     padding-bottom: 20px;
-    
+    text-align: center; /* Center-align text for smaller screens */
 }
-.footer-logo h3{
-    color:#3e3211;
-    font-size:40px ;
+
+.footer-logo h3 {
+    color: #3e3211;
+    font-size: 40px;
     font-weight: 1;
     font-family: "Monoton", sans-serif;
-    font-size:46px ;
+    font-size: 46px;
     font-weight: 700;
     font-family: 'Gotu';
     font-weight: 100;
-    font-style:initial;
-    
-
+    font-style: initial;
 }
-.footer-logo p{
-    color:#1c1a14;
-    font-size:15px ;
+
+.footer-logo p {
+    color: #1c1a14;
+    font-size: 15px;
     font-weight: 500;
     font-family: "Gotu", sans-serif;
+    max-width: 80%; /* Limit text width for better readability */
+    margin: 0 auto; /* Center-align paragraph */
 }
-.footer-links{
+
+.footer-links {
     display: flex;
     list-style: none;
     gap: 50px;
     color: #252525;
     font-size: 20px;
     font-family: "Gotu", sans-serif;
-
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center-align links */
+    padding: 0; /* Remove default padding */
 }
 
-.footer-links li{
-    cursor:pointer;
+.footer-links li {
+    cursor: pointer;
 }
-.footer-links a{
+
+.footer-links a {
     list-style: none;
     margin-left: 20px;
     margin-bottom: -9px;
@@ -58,52 +66,95 @@
     text-decoration: none;
 }
 
-
-.giicons{
-    padding:10px;
+.giicons {
+    font-size: 40px;
+    padding: 10px;
     padding-bottom: 6px;
     padding-left: 3px;
     color: black;
     padding-top: 13px;
-
 }
-.giicons:hover{ animation: bounce 1s infinite;}
-    @keyframes bounce {
-        0%{transform: translateY(0);}
-        40%{transform: translateY(-20px);}
-        60%{transform: translateY(-10px);}
-    /* -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    color: black; */
 
+.giicons:hover {
+    animation: bounce 1s infinite;
 }
-.footer-copyright{
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+.footer-copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:30px;
-    width:100%;
+    gap: 30px;
+    width: 100%;
     margin-bottom: 30px;
-    color:#686565;
+    color: #686565;
     font-size: 20px;
     font-family: "Gotu", sans-serif;
 }
-.footer-copyright hr{
-    width:80%;
-    border:none;
+
+.footer-copyright hr {
+    width: 80%;
+    border: none;
     border-radius: 10px;
-    height:3px;
+    height: 3px;
     background: #c7c7c7;
 }
-.name-list{
+
+.name-list {
     display: flex;
     gap: 2px;
+    align-items: center; /* Align GitHub icons with names */
 }
-.footer-logo hr{
-    width:80%;
-    border:none;
+
+.footer-logo hr {
+    width: 80%;
+    border: none;
     border-radius: 10px;
-    height:3px;
+    height: 3px;
     background: #c7c7c7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 30px; /* Reduce gap between links */
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .footer-logo h3 {
+        font-size: 36px; /* Reduce logo font size */
+    }
+
+    .footer-logo p {
+        font-size: 14px; /* Reduce paragraph font size */
+    }
+
+    .giicons {
+        padding: 8px; /* Adjust icon padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Reduce gap between links */
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .footer-logo h3 {
+        font-size: 30px; /* Further reduce logo font size */
+    }
+
+    .footer-logo p {
+        font-size: 12px; /* Further reduce paragraph font size */
+    }
+
+    .giicons {
+        padding: 6px; /* Further adjust icon padding */
+    }
 }
