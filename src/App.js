@@ -13,6 +13,9 @@ import vision_banner from "./Components/Assets/Categories/visionmod1.jpg";
 import sports_banner from "./Components/Assets/Categories/sportsmod1.jpg";
 import suns_banner from "./Components/Assets/Categories/sunmod1.jpg";
 import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
+import OrderConfirmation from "./Components/Assets/CartItems/OrderConfirmation";
+import PaymentSuccess from "./Components/Assets/CartItems/PaymentSuccess";
+import PaymentFailure from "./Components/Assets/CartItems/PaymentFailure";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -48,9 +51,12 @@ function App() {
             path="/sunglass"
             element={<ShopCategory banner={suns_banner} category="Sunglasses" />}
           />
-          <Route path="/product/:productID" element={<ProductDisplay />} /> {/* Updated route */}
+          <Route path="/product/:productID" element={<ProductDisplay />} /> 
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation/>} />
+          <Route path="/payment-success" element={<PaymentSuccess/>} />
+        <Route path="/payment-failure" element={<PaymentFailure/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
