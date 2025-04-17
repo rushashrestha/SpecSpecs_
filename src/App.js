@@ -16,9 +16,16 @@ import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
 import OrderConfirmation from "./Components/Assets/CartItems/OrderConfirmation";
 import PaymentSuccess from "./Components/Assets/CartItems/PaymentSuccess";
 import PaymentFailure from "./Components/Assets/CartItems/PaymentFailure";
+import { AuthProvider } from "./Context/AuthContext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebaseConfig";
+import { Navigate } from "react-router-dom";
+
+
 
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] =
+   useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,36 +38,50 @@ function App() {
   if (showLoader) {
     return <Loader />;
   }
+  const PrivateRoute = ({ children }) => {
+    const [user] = useAuthState(auth);
+    return user ? children : <Navigate to="/Login" />;
+  };
 
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/" element={<Shop/>}></Route>
-          <Route
-            path="/vision"
-            element={<ShopCategory banner={vision_banner} category="Vision" />}
-          />
-          <Route
-            path="/sports"
-            element={<ShopCategory banner={sports_banner} category="Sports" />}
-          />
-          <Route
-            path="/sunglass"
-            element={<ShopCategory banner={suns_banner} category="Sunglasses" />}
-          />
-          <Route path="/product/:productID" element={<ProductDisplay />} /> 
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
-          <Route path="/order-confirmation" element={<OrderConfirmation/>} />
-          <Route path="/payment-success" element={<PaymentSuccess/>} />
-        <Route path="/payment-failure" element={<PaymentFailure/>} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <AuthProvider>
+      <div>
+        
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/" element={<Shop />}></Route>
+            <Route
+              path="/vision"
+              element={
+                <ShopCategory banner={vision_banner} category="Vision" />
+              }
+            />
+            <Route
+              path="/sports"
+              element={
+                <ShopCategory banner={sports_banner} category="Sports" />
+              }
+            />
+            <Route
+              path="/sunglass"
+              element={
+                <ShopCategory banner={suns_banner} category="Sunglasses" />
+              }
+            />
+            <Route path="/product/:productID" element={<ProductDisplay />} />
+            <Route path="/cart" element={
+              <PrivateRoute><Cart /></PrivateRoute>
+              } />
+            <Route path="/login" element={<LoginSignup />} />
+            <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/payment-failure" element={<PaymentFailure />} />
+          </Routes>
+          <Footer />
+    
+      </div>
+    </AuthProvider>
   );
 }
 

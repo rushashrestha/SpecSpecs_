@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "./Loginsignup.css";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
+import { useNavigate } from "react-router-dom";
+
+
 
 const LoginSignup = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState("Login");
   const [formData, setFormData] = useState({ name: "", email: "", password: "", retypePassword: "" });
   const [errors, setErrors] = useState({});
@@ -29,13 +35,29 @@ const LoginSignup = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validateForm()) {
-      alert(`${state} successful!`);
-      // Perform login or sign-up logic here
+  const handleSubmit = async () => {
+    if (!validateForm()) return;
+  
+    if (state === "Sign Up") {
+      try {
+        await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+        alert("Registration successful!");
+        setState("Login"); // switch to login after registration
+      } catch (err) {
+        alert("Sign Up Error: " + err.message);
+      }
+    } else {
+      try {
+        await signInWithEmailAndPassword(auth, formData.email, formData.password);
+        // alert("Login successful!");
+        navigate("/");
+      } catch (err) {
+        alert("Login Error: " + err.message);
+      }
     }
   };
-
+  
+  
   return (
     <div className="loginsignup">
       <div className="loginsignup-container">
