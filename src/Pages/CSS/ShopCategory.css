@@ -1,99 +1,64 @@
-.shopcategory-banner{
-    display: block;
-    margin: 30px auto;
-    width: 82%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: -100;
-    padding-top: 20px;
-    
+@import url("https://fonts.googleapis.com/css2?family=Gotu&family=Monoton&display=swap");
+
+
+.shop-category {
+  padding-top: 30px;
 }
-.shopcategory-indexSort{
-    display: flex;
-    margin: 0px 170px;
-    justify-content: space-between;
-    align-items: center;
+
+.shopcategory-banner {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.shopcategory-sort{
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: 1px solid #888;
+
+
+.shopcategory-banner .banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
 }
-.our-product{
-    text-align: center;
-    margin-top: 40px;
+.shopcategory-banner .banner-img:hover {
+  transform: scale(1.05);
 }
-.shopcategory-indexSort p span{
-    font-weight: 600;
+
+
+.our-product {
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Gotu', sans-serif;
+  font-size: 2.5rem;
+  color: #2a4346;
+  position: relative;
 }
-.banner-img{
-    width: 100%;
-    height: auto;
+.our-product::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f9dc85;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
-.shopcategory-product{
-    display: flex;
+
+
+.shopcategory-product {
+  display: flex;
   flex-wrap: wrap;
-    background: none;
-    width: 100vw;
-    gap: 20px;
-    border-radius: 20px;
-    justify-content: center;
-    margin-top: 40px;
-
-}
-.shop-category img{
-    border-radius:10px ;
-
-    
-}
-.header{
-    display: flex;
-    background: linear-gradient(180deg, #f2d0f5 0%, #e1ffea22 60%);
-    width: 100%;
-    height: 300px;
-}
-.top{
-    display: flex;
-    background: linear-gradient(180deg, #f2d0f5 0%, #e1ffea22 60%);
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
-    border-radius:10px ;
-    /* border: 1px solid rgb(249, 241, 241) ;
-    border-radius: 50px; */
-    
-}
-.banner-left{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding-left: 180px;
-    line-height: 1.1;
-}
-.banner-left p{
-    color: #171717;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: "Gotu", sans-serif;
-}
-.banner-left h6{
-    font-size: 40px;
-    color: #2a4346;
-}
-.banner-right{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: -100;
-    padding-top: 20px;
-    padding-right: 500px;
-}
-.banner-right img{
-    border-radius: 60px;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
+
+@media (max-width: 768px) {
+  .shopcategory-banner { max-height: 200px; }
+  .our-product { font-size: 2rem; }
+}
+@media (max-width: 480px) {
+  .our-product { font-size: 1.6rem; }
+}
