@@ -1,7 +1,7 @@
 import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
-import { FaPlus } from "react-icons/fa";
+import { FaHeart, FaPlus } from "react-icons/fa";
 
 const Item = (props) => {
   return (
@@ -20,7 +20,7 @@ const Item = (props) => {
         <div className="item-details">
           <div className="item-header">
             <p className="item-name">{props.name}</p>
-            <button className="add-button"><FaPlus /></button>
+            <button className="fav-button"><FaHeart /></button>
           </div>
           <div className="item-prices">
             <div className="item-price-new">रु{props.new_price}</div>

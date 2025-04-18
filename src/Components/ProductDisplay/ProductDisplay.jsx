@@ -54,7 +54,7 @@ const ProductDisplay = () => {
           </div>
           <div className="product-actions">
             <button className="add-to-cart" onClick={() => addToCart(product.id)}>
-              <FaShoppingBag /> Add to Bag
+              <FaShoppingBag /> Add to Cart
             </button>
             <button className="wishlist">
               <FaHeart /> Wishlist Item

@@ -7,6 +7,8 @@ import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/down.png";
 import SearchBar from './SearchBar';
 import { useAuth } from "../../Context/AuthContext";
+import { FaHeart } from "react-icons/fa";
+import { BsCart3 } from "react-icons/bs";
 
 const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
@@ -14,11 +16,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const menuRef = useRef(null);
 
-  const dropdown_toggle = () => {
+  const dropdown_toggle = (e) => {
     if (menuRef.current) {
       menuRef.current.classList.toggle("nav-menu-visible");
+      e.target.classList.toggle("open");
     }
   };
+  
 
   const handleLogout = async () => {
     await logout();
@@ -54,10 +58,11 @@ const Navbar = () => {
           )}
           <div className="cart-image">
             <Link to="/cart">
-              <img src={cart} alt="cart" />
+              <button className="cart-button"><BsCart3 /></button>
             </Link>
+            <div className="nav-cart-count">{getTotalCartItems()}</div>
           </div>
-          <div className="nav-cart-count">{getTotalCartItems()}</div>
+          
         </div>
       </div>
     </div>

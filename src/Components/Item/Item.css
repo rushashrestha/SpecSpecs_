@@ -52,12 +52,16 @@
     font-weight: bold;
 }
 
-.add-button {
-    background-color: #c49a6c;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 50%;
+.fav-button {
+    padding-bottom: 80px;
+    padding-left: 40px;
+    background-color: transparent;
+    font-size: 20px;
+    /* background-color: #c49a6c; */
+    color: rgb(231, 33, 33);
+    border: transparent;
+    /* padding: 5px; */
+    /* border-radius: 50%; */
     cursor: pointer;
 }
 
