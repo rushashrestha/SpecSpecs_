@@ -20,6 +20,7 @@ import { AuthProvider } from "./Context/AuthContext";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebaseConfig";
 import { Navigate } from "react-router-dom";
+import Wishlist from "./Pages/Wishlist";
 
 
 
@@ -73,6 +74,8 @@ function App() {
             <Route path="/cart" element={
               <PrivateRoute><Cart /></PrivateRoute>
               } />
+              <Route path="/wishlist" element={<Wishlist/>} />
+
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
             <Route path="/payment-success" element={<PaymentSuccess />} />

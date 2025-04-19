@@ -1,6 +1,5 @@
-
 import React, { createContext, useState, useEffect } from "react";
-import { auth } from "../firebaseConfig";     // adjust path if needed
+import { auth } from "../firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import allproducts from "../Components/Assets/allproducts";
@@ -17,12 +16,15 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [wishlistItems, setWishlistItems] = useState([]);
   const navigate = useNavigate();
 
-  // Clear cart when user logs out
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
-      if (!user) setCartItems(getDefaultCart());
+      if (!user) {
+        setCartItems(getDefaultCart());
+        setWishlistItems([]);
+      }
     });
     return () => unsub();
   }, []);
@@ -60,6 +62,22 @@ const ShopContextProvider = ({ children }) => {
     return Object.values(cartItems).reduce((a, b) => a + b, 0);
   };
 
+  const addToWishlist = (product) => {
+    if (!auth.currentUser) {
+      navigate("/login");
+      return;
+    }
+    if (!wishlistItems.find((item) => item.id === product.id)) {
+      setWishlistItems((prev) => [...prev, product]);
+    }
+  };
+
+  const removeFromWishlist = (id) => {
+    setWishlistItems((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const getTotalWishlistItems = () => wishlistItems.length;
+
   return (
     <ShopContext.Provider
       value={{
@@ -69,6 +87,10 @@ const ShopContextProvider = ({ children }) => {
         getTotalCartItems,
         addToCart,
         removeFromCart,
+        wishlistItems,
+        addToWishlist,
+        removeFromWishlist,
+        getTotalWishlistItems,
       }}
     >
       {children}

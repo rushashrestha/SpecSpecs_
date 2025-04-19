@@ -5,13 +5,14 @@ import cart from "../Assets/shopping-bag.png";
 import { Link, useNavigate } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/down.png";
-import SearchBar from './SearchBar';
+import SearchBar from "./SearchBar";
 import { useAuth } from "../../Context/AuthContext";
 import { FaHeart } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 
 const Navbar = () => {
-  const { getTotalCartItems } = useContext(ShopContext);
+  const { getTotalCartItems, getTotalWishlistItems } = useContext(ShopContext);
+
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const menuRef = useRef(null);
@@ -22,7 +23,6 @@ const Navbar = () => {
       e.target.classList.toggle("open");
     }
   };
-  
 
   const handleLogout = async () => {
     await logout();
@@ -58,11 +58,22 @@ const Navbar = () => {
           )}
           <div className="cart-image">
             <Link to="/cart">
-              <button className="cart-button"><BsCart3 /></button>
+              <button className="cart-button">
+                <BsCart3 />
+              </button>
             </Link>
             <div className="nav-cart-count">{getTotalCartItems()}</div>
           </div>
-          
+          <div className="wishlist-icon">
+            <Link to="/wishlist">
+              <button className="wishlist-button">
+                <FaHeart />
+              </button>
+              <div className="nav-wishlist-count">
+                {getTotalWishlistItems()}
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
