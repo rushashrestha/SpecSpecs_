@@ -39,7 +39,7 @@ let  allproducts = [
     // qty: 0,
     name: "Ardor Avaitor",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Stay sharp during intense activity with these sleek aviators—built for speed and comfort.",
     brand: "Ray-Ban",
      category: "Sports",
     // gender: "Men",
@@ -57,7 +57,7 @@ let  allproducts = [
     name: "Caper Active",
     
     description:
-      "Pellentesque ac tortor sed ipsum feugiat condimentum.Pellentesque ac tortor sed ipsum feugiat condimentum.",
+      "Designed for performance, these frames combine lightweight comfort with bold, sporty flair.",
     brand: "Persol",
     category: "Sports",
     // gender: "Men",
@@ -75,7 +75,7 @@ let  allproducts = [
     // qty: 0,
     name: "Alder Street",
     description:
-      "Integer et nunc in turpis maximus facilisis ac ac elit.Integer et nunc in turpis maximus facilisis ac ac elit.",
+      "Modern, durable, and ready for any challenge—your ideal sports partner in style.",
     brand: "Kate Spade",
     category: "Sports",
     // gender: "Unisex",
@@ -93,7 +93,7 @@ let  allproducts = [
     // qty: 0,
     name: "Corral Round",
     description:
-      "Vestibulum eu tellus sed lorem tristique lacinia ut vel urna. Vestibulum eu tellus sed lorem tristique lacinia ut vel urna.",
+      "A mix of retro curves and modern edge—crafted for athletes who don’t compromise.",
     brand: "Carrera",
      category: "Sports",
     // gender: "Unisex",
@@ -110,7 +110,7 @@ let  allproducts = [
     // qty: 0,
     name: "Hyperclax Active",
     description:
-      "Aenean at velit consequat, faucibus mi id, tempor velit. Aenean at velit consequat, faucibus mi id, tempor velit.",
+      "A mix of retro curves and modern edge—crafted for athletes who don’t compromise.",
     brand: "Oakley",
      category: "Sports",
     // gender: "Women",
@@ -127,7 +127,7 @@ let  allproducts = [
     // qty: 0,
     name: "Rose Gold Chase",
     description:
-      "Vivamus mattis quam sed libero pretium ullamcorper. Vivamus mattis quam sed libero pretium ullamcorper.",
+      "Add a rosy touch of class to your daily wear—elegant, feminine, and feather-light.",
     brand: "Ray-Ban",
      category: "Vision",
     // gender: "Women",
@@ -144,7 +144,7 @@ let  allproducts = [
     // qty: 0,
     name: "Full Rim Airflex",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Flexible yet sturdy—perfect for all-day comfort and confident style.",
     brand: "Carrera",
      category: "Vision",
     // gender: "Unisex",
@@ -161,7 +161,7 @@ let  allproducts = [
     // qty: 0,
     name: "Mercury Rounded Red",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Brighten your day with bold red rims—modern design with high visual clarity.",
     brand: "Carrera",
     category: "Vision",
     // gender: "Unisex",
@@ -178,7 +178,7 @@ let  allproducts = [
     // qty: 0,
     name: "Candyfloss-302",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Soft pink tints and bold vibes—your perfect blend of cute and confident.",
     brand: "Ray-Ban",
     category: "Sunglasses",
     // gender: "Men",
@@ -195,7 +195,7 @@ let  allproducts = [
     // qty: 0,
     name: "Phenomenal Mercury-02",
     description:
-      "Pellentesque ac tortor sed ipsum feugiat condimentum. Pellentesque ac tortor sed ipsum feugiat condimentum.",
+      "Lightweight mercury-finish frames that shine under the sun—subtle yet standout.",
     brand: "Persol",
     category: "Sunglasses",
     // gender: "Unisex",
@@ -212,7 +212,7 @@ let  allproducts = [
     // qty: 0,
     name: "Black boss",
     description:
-      "Integer et nunc in turpis maximus facilisis ac ac elit. Integer et nunc in turpis maximus facilisis ac ac elit.",
+      "Take control with these ultra-dark lenses and sharp, defining frame edges.",
     brand: "Kate Spade",
     category: "Sunglasses",
     // gender: "Unisex",
@@ -230,7 +230,7 @@ let  allproducts = [
     // qty: 0,
     name: "Blue Ray Wayfarer",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Classic shape meets sporty soul—get UV protection and active-day comfort in one.",
     brand: "Carrera",
     category: "Sports",
     // gender: "Unisex",
@@ -247,7 +247,7 @@ let  allproducts = [
     // qty: 0,
     name: "Pernik",
     description:
-      "Vestibulum eu tellus sed lorem tristique lacinia ut vel urna. Vestibulum eu tellus sed lorem tristique lacinia ut vel urna.",
+      "Stay cool and classy with minimalist design and all-day comfort.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Unisex",
@@ -264,7 +264,7 @@ let  allproducts = [
     // qty: 0,
     name: "Silistra",
     description:
-      "Aenean at velit consequat, faucibus mi id, tempor velit. Aenean at velit consequat, faucibus mi id, tempor velit.",
+      "Graceful and powerful—eye-catching shades designed for sunny elegance.",
     brand: "Oakley",
     category: "Sunglasses",
     // gender: "Women",
@@ -281,7 +281,7 @@ let  allproducts = [
     // qty: 0,
     name: "Full rim acetate black",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Timeless black acetate style that fits every outfit and every mood.",
     brand: "Ray-Ban",
     category: "Vision",
     // gender: "Men",
@@ -298,7 +298,7 @@ let  allproducts = [
     // qty: 0,
     name: "Ruse",
     description:
-      "Fusce sed est nec ipsum convallis semper nec id ipsum. Fusce sed est nec ipsum convallis semper nec id ipsum.",
+      "The go-to pick for bold personalities—lightweight and fashion-forward.",
     brand: "Kate Spade",
     category: "Sunglasses",
     // gender: "Men",
@@ -315,7 +315,7 @@ let  allproducts = [
     // qty: 0,
     name: "Yambol",
     description:
-      "Vivamus mattis quam sed libero pretium ullamcorper. Vivamus mattis quam sed libero pretium ullamcorper.",
+      "Versatility at its best—these shades elevate both casual and formal looks.",
     brand: "Ray-Ban",
     category: "Sunglasses",
     // gender: "Men",
@@ -332,7 +332,7 @@ let  allproducts = [
     // qty: 0,
     name: "Roadies Rd-202",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Perfect for the road and beyond—sturdy, stylish, and sun-shielding.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Men",
@@ -349,7 +349,7 @@ let  allproducts = [
     // qty: 0,
     name: "Burgas",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Chic and charming—sunglasses that flatter every face shape.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Women",
@@ -366,7 +366,7 @@ let  allproducts = [
     // qty: 0,
     name: "Hip Hop Candy",
     description:
-      "Fusce sed est nec ipsum convallis semper nec id ipsum. Fusce sed est nec ipsum convallis semper nec id ipsum.",
+      "Bring the funk to your fitness with vibrant shades that scream energy and edge.",
     brand: "Kate Spade",
     category: "Sports",
     // gender: "Men",
@@ -384,7 +384,7 @@ let  allproducts = [
     // qty: 0,
     name: "Punk Cut Out",
     description:
-      "Vivamus mattis quam sed libero pretium ullamcorper. Vivamus mattis quam sed libero pretium ullamcorper.",
+      "Edgy, bold, and built for thrill—take your look and game up a notch.",
     brand: "Ray-Ban",
     category: "Sports",
     // gender: "Women",
@@ -402,7 +402,7 @@ let  allproducts = [
     // qty: 0,
     name: "Rounded Gold",
     description:
-      "Pellentesque ac tortor sed ipsum feugiat condimentum. Pellentesque ac tortor sed ipsum feugiat condimentum.",
+      "Understated luxury with golden elegance—made for professionals with taste.",
     brand: "Persol",
     category: "Vision",
     // gender: "Men",
@@ -420,7 +420,7 @@ let  allproducts = [
     // qty: 0,
     name: "Jungle Safari",
     description:
-      "Integer et nunc in turpis maximus facilisis ac ac elit. Integer et nunc in turpis maximus facilisis ac ac elit.",
+      "Flexible yet sturdy—perfect for all-day comfort and confident style.",
     brand: "Kate Spade",
     category: "Vision",
     // gender: "Unisex",
@@ -437,7 +437,7 @@ let  allproducts = [
     // qty: 0,
     name: "Burgas",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Chic and charming—sunglasses that flatter every face shape.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Women",
@@ -454,7 +454,7 @@ let  allproducts = [
     // qty: 0,
     name: "Sofia",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Stay cool and classy with minimalist design and all-day comfort.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Women",
@@ -471,7 +471,7 @@ let  allproducts = [
     // qty: 0,
     name: "Plovediv",
     description:
-      "Donec interdum felis non justo sollicitudin lobortis. Donec interdum felis non justo sollicitudin lobortis.",
+      "Chic and charming—sunglasses that flatter every face shape.",
     brand: "Carrera",
     category: "Sunglasses",
     // gender: "Unisex",
@@ -488,7 +488,7 @@ let  allproducts = [
     // qty: 0,
     name: "Airway Black",
     description:
-      "Vestibulum eu tellus sed lorem tristique lacinia ut vel urna. Vestibulum eu tellus sed lorem tristique lacinia ut vel urna.",
+      "Timeless black acetate style that fits every outfit and every mood.",
     brand: "Carrera",
     category: "Vision",
     // gender: "Unisex",
@@ -505,7 +505,7 @@ let  allproducts = [
     // qty: 0,
     name: "Cat-eyed Gold",
     description:
-      "Aenean at velit consequat, faucibus mi id, tempor velit. Aenean at velit consequat, faucibus mi id, tempor velit.",
+      "Understated luxury with golden elegance—made for professionals with taste.",
     brand: "Oakley",
     category: "Vision",
     // gender: "Women",
@@ -522,7 +522,7 @@ let  allproducts = [
     // qty: 0,
     name: "Full Rim Steel Gray",
     description:
-      "Fusce sed est nec ipsum convallis semper nec id ipsum. Fusce sed est nec ipsum convallis semper nec id ipsum.",
+      "Flexible yet sturdy—perfect for all-day comfort and confident style.",
     brand: "Kate Spade",
     category: "Vision",
     // gender: "Men",

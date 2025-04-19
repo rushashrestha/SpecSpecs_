@@ -10,7 +10,8 @@ import Breadcrum from "../Breadcrums/Breadcrum";
 
 const ProductDisplay = () => {
   const { productID } = useParams();
-  const { addToCart } = useContext(ShopContext);
+  const { addToCart, addToWishlist } = useContext(ShopContext);
+
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const ProductDisplay = () => {
             <button className="add-to-cart" onClick={() => addToCart(product.id)}>
               <FaShoppingBag /> Add to Cart
             </button>
-            <button className="wishlist">
+            <button className="wishlist" onClick={() => addToWishlist(product)}>
               <FaHeart /> Wishlist Item
             </button>
           </div>

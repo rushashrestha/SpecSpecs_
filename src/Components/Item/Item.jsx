@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
-import { FaHeart, FaPlus } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Item = (props) => {
+  const { addToWishlist } = useContext(ShopContext);
+
+  const handleAddToWishlist = () => {
+    addToWishlist({
+      id: props.id,
+      name: props.name,
+      image: props.image,
+      new_price: props.new_price,
+      old_price: props.old_price,
+      category: props.category
+    });
+  };
+
   return (
     <div className="item">
       <div className="items">
@@ -20,7 +34,9 @@ const Item = (props) => {
         <div className="item-details">
           <div className="item-header">
             <p className="item-name">{props.name}</p>
-            <button className="fav-button"><FaHeart /></button>
+            <button className="fav-button" onClick={handleAddToWishlist}>
+              <FaHeart />
+            </button>
           </div>
           <div className="item-prices">
             <div className="item-price-new">रु{props.new_price}</div>
