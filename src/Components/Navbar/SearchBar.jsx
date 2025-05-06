@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import products from '../Assets/allproducts'; // Corrected import path
+import products from '../Assets/allproducts'; 
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -10,7 +10,6 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const searchRef = useRef(null);
 
-  // Handle click outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
@@ -21,7 +20,7 @@ const SearchBar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Search filter with debounce
+
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
       if (query.trim()) {
@@ -34,13 +33,13 @@ const SearchBar = () => {
         setResults([]);
         setShowResults(false);
       }
-    }, 300); // 300ms delay
+    }, 300);
 
     return () => clearTimeout(delayDebounce);
   }, [query]);
 
   const handleProductClick = (productId) => {
-    navigate(`/product/${productId}`); // Navigate to the product detail page
+    navigate(`/product/${productId}`); 
     setQuery('');
     setShowResults(false);
   };
@@ -54,21 +53,24 @@ const SearchBar = () => {
         onChange={(e) => setQuery(e.target.value)}
         onFocus={() => setShowResults(true)}
       />
-      {showResults && results.length > 0 && (
-        <div className="search-results">
-          {results.map(product => (
-            <div
-              key={product.id}
-              className="search-item"
-              onClick={() => handleProductClick(product.id)}
-            >
-              <img src={product.image} alt="product image" />
-              {product.name}
-              
-            </div>
-          ))}
+      {showResults && (
+  <div className="search-results">
+    {results.length > 0 ? (
+      results.map(product => (
+        <div
+          key={product.id}
+          className="search-item"
+          onClick={() => handleProductClick(product.id)}
+        >
+          <img src={product.image} alt="product image" />
+          {product.name}
         </div>
-      )}
+      ))
+    ) : (
+      <div className="no-results">Product not found</div>
+    )}
+  </div>
+)}
     </div>
   );
 };
