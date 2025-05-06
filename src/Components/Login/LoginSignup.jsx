@@ -1,130 +1,115 @@
 import React, { useState } from "react";
 import "./Loginsignup.css";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+import loginImage from "./login-illustration.jpg";
+import signupImage from "./signup-illustration.jpg";
+
+const getFriendlyError = (errorCode) => {
+  switch (errorCode) {
+    case "auth/invalid-email":
+      return "Please enter a valid email address.";
+    case "auth/user-not-found":
+      return "No account found with this email.";
+    case "auth/wrong-password":
+      return "Incorrect password. Try again.";
+    case "auth/email-already-in-use":
+      return "This email is already registered.";
+    case "auth/weak-password":
+      return "Password should be at least 6 characters.";
+    case "auth/invalid-credential":
+      return "Invalid credentials. Please check your email and password.";
+    default:
+      return "Something went wrong. Please try again.";
+  }
+};
 
 
 const LoginSignup = () => {
+  const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   const navigate = useNavigate();
-  const [state, setState] = useState("Login");
-  const [formData, setFormData] = useState({ name: "", email: "", password: "", retypePassword: "" });
-  const [errors, setErrors] = useState({});
-
-  const validateForm = () => {
-    let newErrors = {};
-    
-    if (state === "Sign Up" && !formData.name.trim()) {
-      newErrors.name = "Name is required.";
-    }
-    
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Enter a valid email.";
-    }
-    
-    if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters.";
-    }
-
-    if (state === "Sign Up" && formData.password !== formData.retypePassword) {
-      newErrors.retypePassword = "Passwords do not match.";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
 
   const handleSubmit = async () => {
-    if (!validateForm()) return;
-  
-    if (state === "Sign Up") {
-      try {
-        await createUserWithEmailAndPassword(auth, formData.email, formData.password);
-        alert("Registration successful!");
-        setState("Login"); // switch to login after registration
-      } catch (err) {
-        alert("Sign Up Error: " + err.message);
+    if (!email || !password) {
+      toast.warning("Please fill in all fields.");
+      return;
+    }
+
+    if (!isLogin && password !== confirmPassword) {
+      toast.error("Passwords do not match.");
+      return;
+    }
+
+    try {
+      if (isLogin) {
+        await signInWithEmailAndPassword(auth, email, password);
+        toast.success("Login successful!");
+        setTimeout(() => navigate("/"), 1500);
+      } else {
+        await createUserWithEmailAndPassword(auth, email, password);
+        toast.success("Account created successfully!");
+        setTimeout(() => navigate("/"), 1500);
       }
-    } else {
-      try {
-        await signInWithEmailAndPassword(auth, formData.email, formData.password);
-        // alert("Login successful!");
-        navigate("/");
-      } catch (err) {
-        alert("Login Error: " + err.message);
-      }
+    } catch (error) {
+      const friendlyMessage = getFriendlyError(error.code);
+      toast.error(friendlyMessage);
+      console.log("Firebase error:", error.code);
+
     }
   };
-  
-  
+
   return (
-    <div className="loginsignup">
-      <div className="loginsignup-container">
-        <div className="header">
-          <div className="text">{state}</div>
-          <div className="underline"></div>
-        </div>
-
-        <div className="loginsignup-fields">
-          {state === "Sign Up" && (
-            <>
-              <input
-                type="text"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-              {errors.name && <p className="error">{errors.name}</p>}
-            </>
-          )}
-
-          <input
-            type="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
-          {errors.email && <p className="error">{errors.email}</p>}
-
+    <div className="login-signup-container">
+      <ToastContainer position="top-right" toastStyle={{ marginTop: "70px" }} />
+      <div className="image-section">
+        <img
+          src={isLogin ? loginImage : signupImage}
+          alt="Illustration"
+          className="side-image"
+        />
+      </div>
+      <div className="form-section">
+        <h2>{isLogin ? "Login" : "Sign Up"}</h2>
+        <input
+          type="email"
+          placeholder="Email Address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {!isLogin && (
           <input
             type="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          {errors.password && <p className="error">{errors.password}</p>}
-
-          {state === "Sign Up" && (
-            <>
-              <input
-                type="password"
-                placeholder="Retype Password"
-                value={formData.retypePassword}
-                onChange={(e) => setFormData({ ...formData, retypePassword: e.target.value })}
-              />
-              {errors.retypePassword && <p className="error">{errors.retypePassword}</p>}
-            </>
-          )}
-        </div>
-
-        <div className="btn">
-          <button onClick={handleSubmit}>Continue</button>
-        </div>
-
-        <div className="account">
-          {state === "Sign Up" ? (
-            <p className="loginsignup-login">
-              Already have an account?{" "}
-              <span onClick={() => setState("Login")}>Login</span>
-            </p>
-          ) : (
-            <p className="loginsignup-login">
-              Don't have an account?{" "}
-              <span onClick={() => setState("Sign Up")}>Sign Up</span>
-            </p>
-          )}
-        </div>
+        )}
+        <button onClick={handleSubmit}>
+          {isLogin ? "Continue" : "Register"}
+        </button>
+        <p>
+          {isLogin ? "Don't have an account?" : "Already have an account?"}
+          <span onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? " Sign Up" : " Login"}
+          </span>
+        </p>
       </div>
     </div>
   );

@@ -1,262 +1,140 @@
-@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
-
-.loginsignup {
+.login-signup-container {
   display: flex;
+  width: 900px;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.image-section {
+  flex: 1;
+  display: block;
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-section {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 70vh;
-  background-position: center;
-  margin: 70px 0;
-  padding-top: 40px;
+  gap: 22px;
+  background-color: #fafafa;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
 }
 
-.loginsignup-container {
-  background: transparent;
-  backdrop-filter: blur(10px);
-  border: 1px solid gray;
-  padding: 0px 60px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 450px;
-  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
-  box-sizing: border-box;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-  width: 100%;
-  margin-top: 30px;
-  height: 80px;
-  background: transparent;
-}
-
-.text {
-  color: black;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: "Gotu", sans-serif;
-}
-
-.underline {
-  width: 61px;
-  height: 3px;
-  background: #3c009d;
-  border-radius: 9px;
-}
-
-.btn button {
-  width: 40%;
-  height: 40px;
-  padding: 10px;
-  padding-bottom: 30px;
-  padding-top: 5px;
-  border: none;
-  background-color: transparent;
-  color: rebeccapurple;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  font-family: "Gotu", sans-serif;
-  margin-left: 88px;
-}
-
-.account {
-  display: flex;
+.form-section h2 {
+  color: #9e76e3;
   text-align: center;
-  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.account p {
-  font-family: "Gotu", sans-serif;
-}
-
-.account span {
-  border: none;
-  color: rebeccapurple;
-  background: transparent;
-  cursor: pointer;
-}
-
-.loginsignup-fields {
+.form-section input {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
   outline: none;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  gap: 20px;
+  background-color: white;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-input {
-  padding: 15px;
-  margin: 10px 0;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid gray;
-  width: 100%;
-  max-width: 270px;
-  box-sizing: border-box;
+.form-section input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
 }
 
-.loginsignup-login {
-  margin-top: 20px;
-  color: #5c5c5c;
-  font-size: 18px;
+.form-section button {
+  padding: 14px;
+  background-color: #9e76e3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-section button:hover {
+  background-color: #b7b4f1;
+  transform: translateY(-1px);
+}
+
+.form-section p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-section span {
+  color: #6c63ff;
+  cursor: pointer;
+  margin-left: 5px;
   font-weight: 500;
 }
 
-.loginsignup-agree {
-  display: flex;
-  align-items: center;
-  margin-top: 25px;
-  gap: 20px;
-  color: #5c5c5c;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-/* Media Queries for responsiveness */
-
-@media (max-width: 1200px) {
-  .loginsignup-container {
-    max-width: 450px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  .loginsignup-fields input {
-    height: 50px;
-  }
-
-  .btn button {
-    width: 60%;
-    margin-left: 20%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 1024px) {
-  .loginsignup {
-    padding-top: 50px;
-  }
-
-  .loginsignup-container {
-    width: auto;
-    max-width: 500px;
-    padding: 20px;
-  }
-
-  .loginsignup-fields input {
-    height: 60px;
-    width: 100%;
-  }
-
-  .btn button {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .loginsignup-login {
-    font-size: 16px;
-  }
-
-  .loginsignup-agree {
-    font-size: 16px;
-    gap: 10px;
-  }
-}
+/* Responsive Styles */
 
 @media (max-width: 768px) {
-  .loginsignup {
-    height: auto;
-    padding-top: 20px;
-  }
-
-  .loginsignup-container {
+  .login-signup-container {
+    flex-direction: column;
     width: 90%;
-    padding: 15px;
+    margin: 40px auto;
   }
 
-  .loginsignup-fields input {
-    height: 50px;
-    width: 100%;
+  .image-section {
+    display: none;
   }
 
-  .loginsignup-login {
-    font-size: 14px;
-  }
-
-  .loginsignup-agree {
-    font-size: 14px;
-    gap: 10px;
-  }
-
-  .btn button {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
+  .form-section {
+    padding: 40px 30px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .loginsignup {
-    height: auto;
-    margin: 50px 0;
+  .form-section h2 {
+    font-size: 22px;
   }
 
-  .loginsignup-container {
-    width: 85%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .loginsignup-fields input {
-    height: 50px;
-    width: 100%;
-  }
-
-  .header .text {
-    font-size: 20px;
-  }
-
-  .btn button {
-    width: 100%;
+  .form-section input,
+  .form-section button {
+    font-size: 14px;
     padding: 12px;
-    font-size: 16px;
   }
 
-  .loginsignup-login,
-  .loginsignup-agree {
-    font-size: 12px;
-    text-align: center;
+  .form-section {
+    gap: 16px;
+    padding: 30px 20px;
   }
 
-  .account {
-    display: block;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .account p {
-    font-size: 14px;
-  }
-
-  .account span {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 320px) {
-  .loginsignup-container {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .loginsignup-fields input {
-    height: 45px;
-  }
-
-  .btn button {
-    font-size: 14px;
+  .form-section p {
+    font-size: 13px;
   }
 }
