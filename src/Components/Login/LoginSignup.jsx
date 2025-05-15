@@ -39,35 +39,44 @@ const LoginSignup = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
+const isValidPassword = (password) => {
+  const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
+  return regex.test(password);
+};
 
-  const handleSubmit = async () => {
-    if (!email || !password) {
-      toast.warning("Please fill in all fields.");
-      return;
+const handleSubmit = async () => {
+  if (!email || !password) {
+    toast.warning("Please fill in all fields.");
+    return;
+  }
+
+  if (!isLogin && password !== confirmPassword) {
+    toast.error("Passwords do not match.");
+    return;
+  }
+
+  if (!isLogin && !isValidPassword(password)) {
+    toast.error("Password must be at least 6 characters, include a number, letter, and special character.");
+    return;
+  }
+
+  try {
+    if (isLogin) {
+      await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Login successful!");
+      setTimeout(() => navigate("/"), 1500);
+    } else {
+      await createUserWithEmailAndPassword(auth, email, password);
+      toast.success("Account created successfully!");
+      setTimeout(() => navigate("/"), 1500);
     }
+  } catch (error) {
+    const friendlyMessage = getFriendlyError(error.code);
+    toast.error(friendlyMessage);
+    console.log("Firebase error:", error.code);
+  }
+};
 
-    if (!isLogin && password !== confirmPassword) {
-      toast.error("Passwords do not match.");
-      return;
-    }
-
-    try {
-      if (isLogin) {
-        await signInWithEmailAndPassword(auth, email, password);
-        toast.success("Login successful!");
-        setTimeout(() => navigate("/"), 1500);
-      } else {
-        await createUserWithEmailAndPassword(auth, email, password);
-        toast.success("Account created successfully!");
-        setTimeout(() => navigate("/"), 1500);
-      }
-    } catch (error) {
-      const friendlyMessage = getFriendlyError(error.code);
-      toast.error(friendlyMessage);
-      console.log("Firebase error:", error.code);
-
-    }
-  };
 
   return (
     <div className="login-signup-container">
