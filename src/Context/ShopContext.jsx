@@ -34,18 +34,33 @@ const ShopContextProvider = ({ children }) => {
       navigate("/login");
       return;
     }
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
   };
 
+  // Decrease quantity by 1, minimum 1
+  const removeOneFromCart = (itemId) => {
+    if (!auth.currentUser) {
+      navigate("/login");
+      return;
+    }
+    setCartItems((prev) => {
+      if (prev[itemId] > 1) {
+        return { ...prev, [itemId]: prev[itemId] - 1 };
+      } else {
+        return { ...prev, [itemId]: 1 };
+      }
+    });
+  };
+
+  // Remove item completely
   const removeFromCart = (itemId) => {
     if (!auth.currentUser) {
       navigate("/login");
       return;
     }
-    setCartItems((prev) => ({
-      ...prev,
-      [itemId]: Math.max(prev[itemId] - 1, 0),
-    }));
+    const updated = { ...cartItems };
+    delete updated[itemId];
+    setCartItems(updated);
   };
 
   const getTotalCartAmount = () => {
@@ -87,6 +102,7 @@ const ShopContextProvider = ({ children }) => {
         getTotalCartItems,
         addToCart,
         removeFromCart,
+        removeOneFromCart,
         wishlistItems,
         addToWishlist,
         removeFromWishlist,

@@ -5,7 +5,7 @@ import remove_icon from '../removeicon.png';
 import { useNavigate } from "react-router-dom";
 
 const CartItems = () => {
-    const { getTotalCartAmount, allproducts, cartItems, removeFromCart } = useContext(ShopContext);
+    const { getTotalCartAmount, allproducts, cartItems, removeFromCart, addToCart, removeOneFromCart } = useContext(ShopContext);
     const navigate = useNavigate();
 
     return (
@@ -27,9 +27,13 @@ const CartItems = () => {
                                 <img src={e.image} alt="" className="carticon-product-icon" />
                                 <p>{e.name}</p>
                                 <p>Rs.{e.new_price}</p>
-                                <button className="cartitems-quantity">{cartItems[e.id]}</button>
+                                <div className="cartitems-quantity-controls">
+                                    <button className="cartitems-quantity-btn" onClick={() => removeOneFromCart(e.id)}>-</button>
+                                    <span className="cartitems-quantity">{cartItems[e.id]}</span>
+                                    <button className="cartitems-quantity-btn" onClick={() => addToCart(e.id)}>+</button>
+                                </div>
                                 <p>Rs.{e.new_price * cartItems[e.id]}</p>
-                                <img className='cartitems-remove-icon' src={remove_icon} onClick={() => { removeFromCart(e.id) }} alt="Remove" />
+                                <img className='cartitems-remove-icon' src={remove_icon} onClick={() => removeFromCart(e.id)} alt="Remove" />
                             </div>
                             <hr />
                         </div>
@@ -52,7 +56,6 @@ const CartItems = () => {
                         </div>
                     </div>
                     <button onClick={() => navigate("/order-confirmation")}>PROCEED TO CHECKOUT</button>
-
                 </div>
             </div>
         </div>

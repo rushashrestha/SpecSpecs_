@@ -89,3 +89,33 @@
     color: white;
     cursor: pointer;
 }
+.cartitems-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartitems-quantity-btn {
+  padding: 0px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartitems-quantity {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
